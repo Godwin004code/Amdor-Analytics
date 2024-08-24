@@ -1,6 +1,7 @@
 import React from 'react'
 import { MdStarRate } from "react-icons/md";
 import img from "../../assets/2a1b8774ac452db1e2b7551ba9f4f9f2.png"
+import YTComponent from './YTComponent';
 
 const Testimonial = () => {
   const testimony = [
@@ -37,6 +38,14 @@ const Testimonial = () => {
         <p className='w-[70%] sm:w-full font-normal text-[#59595A]'>Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.</p>
         <button className='h-[60px] hidden bg-[#fff] px-5 rounded-lg text-[#262626]'>View All</button>
       </div>
+      <section className='flex justify-between sm:gap-10 sm:flex-col mt-10'>
+       
+        <YTComponent videoId={"3VowbyaJ4EI"} />
+        <YTComponent videoId={"sD2VFVqv8H0"} />
+        <YTComponent videoId={"zjSdEiURniw"} />
+        <YTComponent videoId={"f7B_srP1hIg"} />
+
+      </section>
       <div className='flex justify-between flex-wrap mt-10'>
         {testimony.map((item, idx) => {
           const {name, description,rating, avatar} = item
