@@ -3,7 +3,7 @@ import Counter from "../Global/Counter"
 
 const Stats = () => {
   return (
-    <div className='w-full'>
+    <div className='w-full mt-28'>
          <h2 className='text-center hidden font-semibold text-4xl'>Our Statistics</h2>
 
         <section className='flex sm:flex-col w-[100%] mx-auto justify-between mt-10'>

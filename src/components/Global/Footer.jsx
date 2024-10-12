@@ -102,7 +102,7 @@ const Footer = () => {
             </ul>
           </nav>
           <div>
-            <h2 className='mt-4'>Phone Numbers: +2348114087403,+2348114087403</h2>
+            <h2 className='mt-4'>Phone Numbers: +2348114087403</h2>
            
             <h2 className='mt-4'>Email: amdoranalytics@gmail.com</h2>
           </div>

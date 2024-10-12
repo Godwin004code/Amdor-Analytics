@@ -170,7 +170,7 @@ const Benefit = () => {
         {Benefits.map((item, idx) => {
           const {title, description, li1, li2,li3,icon} = item
           return (
-            <div className='bg-[#2BDA2A] mb-8 w-[32%] sm:w-full rounded-xl p-8' key={idx}>
+            <div className='bg-[#3AA619] mb-8 w-[32%] sm:w-full rounded-xl p-8' key={idx}>
              <div className='flex justify-between'>
       <h2 dangerouslySetInnerHTML={{ __html: icon }} />
              <h2 className='font-bold text-[#fff] ml-auto w-fit text-7xl'>0{idx+1}</h2>

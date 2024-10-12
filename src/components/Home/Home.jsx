@@ -12,6 +12,8 @@ import Stats from './Stats'
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import avatar from "../../assets/Group 28.png"
 import Popup from '../Global/Popup'
+import { Link } from 'react-router-dom'
+
 
 const Home = () => {
   return (
@@ -25,7 +27,9 @@ const Home = () => {
     <section className=' py-2 flex justify-between w-[90%] mx-auto'>
       <h2 className='sm:hidden'></h2>
 <h2 className='text-center text-white text-base'>Join Our Next Free Masterclass</h2>
+<Link to="/signup">
 <h2 className='text-[#fff] font-light '>Sign Up</h2>
+</Link>
     </section>
     </section>
     <Nav />

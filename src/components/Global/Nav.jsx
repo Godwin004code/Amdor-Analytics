@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import logo from "../../assets/README.png"
+import logo from "../../assets/amdor-new-logo.png"
 import { Link } from 'react-router-dom'
 import { HiOutlineXMark } from "react-icons/hi2";
 import { HiBars3BottomRight } from "react-icons/hi2";
@@ -9,26 +9,30 @@ const Nav = () => {
     function toggleNav() {
         setMobileShown(!mobileShown);
       }
+
+      // 
+
+      const path = window.location.pathname;
   return (
     <header className='w-full'>
-        <div className='w-[90%] flex justify-between mx-auto' style={{borderBottom: '1px solid #F1F1F3'}}>
+        <div className='w-[90%]  flex justify-between mx-auto' style={{borderBottom: '1px solid #F1F1F3'}}>
         <section className='flex'>
            <Link to="/"> <img className='w-[125px] h-[100px] object-cover' src={logo} alt="Amdor Analytics" /></Link>
             <nav className='my-auto ml-4 sm:hidden'>
                 <ul className='flex'>
-                    <li className='h-[55px] flex justify-center items-center bg-[#F1F1F3] px-6 rounded-lg'>
+                    <li className={path === '/learn' ? 'h-[55px] flex bg-[#F1F1F3] justify-center items-center  px-6 rounded-lg' : 'h-[55px] flex justify-center items-center  px-6 rounded-lg'}>
                         <Link  to="/learn">Learn</Link>
                     </li>
-                    <li className='h-[55px] flex justify-center items-center  px-6 rounded-lg'>
+                    <li className={path === '/courses' ? 'h-[55px] flex bg-[#F1F1F3] justify-center items-center  px-6 rounded-lg' : 'h-[55px] flex justify-center items-center  px-6 rounded-lg'}>
                         <Link to="/courses">Courses</Link>
                     </li>
-                    <li className='h-[55px] flex justify-center items-center  px-6 rounded-lg'>
-                        <Link to="/about-us">About Us</Link>
+                    <li className={path === '/about' ? 'h-[55px] flex bg-[#F1F1F3] justify-center items-center  px-6 rounded-lg' : 'h-[55px] flex justify-center items-center  px-6 rounded-lg'}>
+                        <Link to="/about">About Us</Link>
                     </li>
-                    <li className='h-[55px] flex justify-center items-center  px-6 rounded-lg'>
-                        <Link to="/pricing">Pricing</Link>
+                    <li className={path === '/blog' ? 'h-[55px] flex bg-[#F1F1F3] justify-center items-center  px-6 rounded-lg' : 'h-[55px] flex justify-center items-center  px-6 rounded-lg'}>
+                        <Link to="/blog">Blog</Link>
                     </li>
-                    <li className='h-[55px] flex justify-center items-center  px-6 rounded-lg'>
+                    <li className={path === '/contact' ? 'h-[55px] flex bg-[#F1F1F3] justify-center items-center  px-6 rounded-lg' : 'h-[55px] flex justify-center items-center  px-6 rounded-lg'}>
                         <Link to="/contact">Contact</Link>
                     </li>
 
@@ -42,7 +46,7 @@ const Nav = () => {
             <button className='h-[55px] w-[117px] rounded-lg text-white bg-[#01D300]'>Login</button>
         </section>
  
-        <button className="hidden lg:block my-auto w-[50px]" onClick={toggleNav}>
+        <button className="hidden float-right lg:block my-auto  sm:w-fit" onClick={toggleNav}>
          <HiBars3BottomRight size={30} />
         </button>
    
@@ -73,19 +77,19 @@ const Nav = () => {
               </Link>
             </li>
             <li>
-              <Link to="/learn" className="font-medium">
-               Learn
+              <Link to="/about" className="font-medium">
+               About us
               </Link>
             </li>
            
             <li>
-              <Link to="/" className="font-medium">
+              <Link to="/courses" className="font-medium">
                 Courses
               </Link>
             </li>
             <li>
-              <Link to="/" className="font-medium">
-            Pricing
+              <Link to="/blog" className="font-medium">
+            Blog
               </Link>
             </li>
             <li>
@@ -94,9 +98,9 @@ const Nav = () => {
               </Link>
             </li>
 
-            <Link to="/register">
+            <Link to="/signup">
               <button className="bg-[#01D300] text-white w-full mt-[80px] rounded-md py-4 px-10">
-                Login
+                Get Started
               </button>
             </Link>
           </ul>

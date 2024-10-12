@@ -2,6 +2,7 @@ import React from 'react'
 import { MdOutlineElectricBolt } from "react-icons/md";
 import heroImg from "../../assets/Frame 1000005840-2.png"
 import AbstractLine from "../../assets/Abstract Line.png"
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -28,8 +29,13 @@ const Hero = () => {
                 <h2 className='text-[#262626] font-medium text-base  mt-4'>Our programs equip you with the skills and knowledge to excel in the global tech industry:</h2>
                 <h2 className='text-[#262626] font-normal text-base sm:text-sm  mt-3'>Cutting-Edge Curriculum, Expert Instructors & Tailored Guidance, Hands-On Learning & Project Portfolios, Global Community & Networking and post training support.</h2>
                 <div className='flex gap-4 w-full justify-center mt-7'>
+                    
+                    <Link to="/courses">
                     <button className='h-[60px] bg-[#01D300] px-5 rounded-lg text-white'>Explore Courses</button>
-                    <button className='h-[60px] bg-[#fff] px-5 rounded-lg text-[#262626]'>Get Started</button>
+                    </Link>
+
+                    <Link to="/signup">
+                    <button className='h-[60px] bg-[#fff] px-5 rounded-lg text-[#262626]'>Get Started</button></Link>
                 </div>
             </div>
             <div className='sm:hidden'>
