@@ -18,47 +18,47 @@ const CourseCurriculum = ({course}) => {
 <div>
     <div className='course-one p-5 rounded-lg mb-3'>
         <h2 className='text-[#333333] text-lg font-medium'>{des_one}</h2>
-        <p>Lesson 01</p>
+       
     </div>
    {des_two != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
         <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
-        <p>Lesson 02</p>
+    
     </div>}
     {des_three != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
         <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
-        <p>Lesson 03</p>
+    
     </div>}
     {des_four != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
         <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
-        <p>Lesson 04</p>
+        
     </div>}
     {des_five != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
         <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
-        <p>Lesson 05</p>
+       
     </div>}
     {des_six != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
         <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
-        <p>Lesson 06</p>
+   
     </div>}
     {des_seven != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
         <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
-        <p>Lesson 07</p>
+    
     </div>}
     {des_eight != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
         <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
-        <p>Lesson 08</p>
+      
     </div>}
     {des_nine != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
         <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
-        <p>Lesson 09</p>
+
     </div>}
     {des_ten != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
         <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
-        <p>Lesson 10</p>
+   
     </div>}
     {des_eleven != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
         <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
-        <p>Lesson 11</p>
+   
     </div>}
 
 </div>

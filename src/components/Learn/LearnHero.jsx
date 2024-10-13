@@ -6,11 +6,11 @@ const LearnHero = () => {
   return (
     <div className='flex sm:flex-col z-40 w-[90%] mx-auto mt-14 sm:mt-5'>
       <div className="my-auto">
-        <h2 className='text-[#384250] font-bold sm:text-5xl text-7xl'>Explore <span className='text-[#01D300]'>Instructor</span></h2>
+        <h2 className='text-[#384250] font-bold sm:text-5xl text-7xl'>Explore <span className='text-[#3AA619]'>Instructor</span></h2>
         <h2 className='text-[#384250] font-bold sm:text-5xl text-7xl'>Lead Courses</h2>
         <p className='text-[#384250] mt-[30px] font-normal sm:text-base text-lg sm:w-full w-[70%]'>Choose from over 2,000+ courses on topics like user interface design, graphic design, front-end development, and much more...</p>
         <Link to="/register">
-          <button className="bg-[#01D300] text-white w-fit mt-[30px] rounded-md py-4 px-10">
+          <button className="bg-[#3AA619] text-white w-fit mt-[30px] rounded-md py-4 px-10">
             Get Started
           </button>
         </Link>

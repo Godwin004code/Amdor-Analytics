@@ -43,7 +43,7 @@ const Nav = () => {
             <h2 className='my-auto'>
                 <Link className='text-[#262626] font-normal text-lg' to="/signup">Sign up</Link>
             </h2>
-            <button className='h-[55px] w-[117px] rounded-lg text-white bg-[#01D300]'>Login</button>
+            <button className='h-[55px] w-[117px] rounded-lg text-white bg-[#3AA619]'>Login</button>
         </section>
  
         <button className="hidden float-right lg:block my-auto  sm:w-fit" onClick={toggleNav}>
@@ -99,7 +99,7 @@ const Nav = () => {
             </li>
 
             <Link to="/signup">
-              <button className="bg-[#01D300] text-white w-full mt-[80px] rounded-md py-4 px-10">
+              <button className="bg-[#3AA619] text-white w-full mt-[80px] rounded-md py-4 px-10">
                 Get Started
               </button>
             </Link>

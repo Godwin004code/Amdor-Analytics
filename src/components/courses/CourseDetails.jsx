@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import CourseInstructor from './CourseInstructor';
 import CourseBenefits from './CourseBenefits';
 import CourseReview from './CourseReview';
+import CourseRating from './CourseRating';
 
 const CourseDetails = () => {
     const { title } = useParams();
@@ -35,7 +36,9 @@ const CourseDetails = () => {
 <CourseCurriculum course={course} />
 <CourseInstructor course={course} />
 <CourseBenefits course={course} />
+<CourseRating />
 <CourseReview course={course} />
+
 <Footer />
     </section>
   )

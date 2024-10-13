@@ -3,7 +3,7 @@ import React from 'react'
 const LearnWhy = () => {
   return (
     <div>
-        <h2 className='text-[#01D300] font-bold text-5xl sm:text-2xl text-center'>Why Choose Our Instructor Led Program</h2>
+        <h2 className='text-[#3AA619] font-bold text-5xl sm:text-2xl text-center'>Why Choose Our Instructor Led Program</h2>
         <div className='flex sm:flex-col gap-10 sm:justify-center sm:gap-5 justify-between w-[90%] mx-auto mt-14'>
             <div className='sm:text-center w-[25%] sm:w-full flex justify-center items-center flex-col sm:items-center'>
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">

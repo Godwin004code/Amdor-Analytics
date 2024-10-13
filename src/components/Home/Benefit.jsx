@@ -161,7 +161,7 @@ const Benefit = () => {
   ]
   return (
     <div className='w-[90%] mx-auto mt-28'>
-      <h2 className='text-[#01D300] font-semibold text-3xl'>Explore Our Offerings</h2>
+      <h2 className='text-[#3AA619] font-semibold text-3xl'>Explore Our Offerings</h2>
       <div className='flex justify-between sm:hidden mt-6 hidden'>
         <p className='w-[70%] font-normal text-[#59595A]'>Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.</p>
         <button className='h-[60px] bg-[#fff] px-5 rounded-lg text-[#262626]'>View All</button>

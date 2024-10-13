@@ -6,7 +6,7 @@ const RecentPost = ({posts}) => {
     const post = posts[0]
   return (
     <div className='w-[90%] mx-auto mb-10 mt-10'>
-       <h2 className='text-[#01D300] my-auto  font-semibold text-3xl mb-3'>Recent blog post</h2>
+       <h2 className='text-[#3AA619] my-auto  font-semibold text-3xl mb-3'>Recent blog post</h2>
    <Link to={`/blog/${post.title}`} className='w-full'>
    <div className='flex w-full sm:flex-col'>
         <div className='w-[45%] sm:w-full'>

@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 import { MdStarRate } from "react-icons/md";
-import img from "../../assets/2a1b8774ac452db1e2b7551ba9f4f9f2.png"
+import img from "../../assets/WhatsApp Image 2024-10-13 at 00.30.58.jpeg"
+import img1 from "../../assets/WhatsApp Image 2024-10-13 at 00.37.18.jpeg"
+import img2 from "../../assets/WhatsApp Image 2024-10-13 at 00.39.07.jpeg"
+import img3 from "../../assets/WhatsApp Image 2024-10-13 at 00.42.49.jpeg"
 import YTComponent from './YTComponent';
 import photo1 from "../../assets/PHOTO-2024-10-08-19-06-42 2.jpg"
 import photo2 from "../../assets/PHOTO-2024-10-08-19-06-42 3.jpg"
@@ -13,28 +16,28 @@ import { CiCircleRemove } from "react-icons/ci";
 const Testimonial = () => {
   const testimony = [
     {
-      name: "Emmanuel Danso-Boafo",
+      name: "Sodiq",
       description: "When I decided to advance my skills in data analytics, I turned to AMDOR ANALYTICS, and it was one of the best decisions I've made for my career. The comprehensive curriculum, hands-on training, and expert guidance have significantly enhanced my skills in data analytics. The learning environment is supportive and the instructors are deeply knowledgeable. Their program doesn't just teach you the basics; it immerses you in the tools and techniques that matter most in the industry. From mastering Excel and Power BI to becoming proficient in SQL, the hands-on approach made learning intuitive and practical. I am well-prepared to apply the concepts and tools I've learned, such as Excel, Power BI, and SQL, in real-world scenarios. What sets AMDOR ANALYTICS apart is the personal touch—they genuinely care about your growth and ensure you leave with confidence in your abilities. I now feel empowered to tackle complex data challenges and drive meaningful insights, all thanks to AMDOR ANALYTICS. Amdor Analytics has exceeded my expectations, and I would highly recommend their programs to anyone looking to advance their career in data analytics.",
       rating:5,
       avatar: img
     },
     {
-      name: "Seyi",
+      name: "Oluwatobi",
       description: "I had the pleasure of taking up some data trainings with Amdor Analytics, and I can confidently say they exceeded all expectations. As someone who was transitioning into the data world, they gave me a soft landing. The team demonstrated a deep understanding of the tools and provided tailored training to fit specific needs, regardless of the level of the trainee. The level of professionalism and expertise at Amdor Analytics is truly outstanding. They are always responsive, and consistently delivered high-quality and affordable trainings. What impressed me the most was their round the clock commitment to our success, they went above and beyond to ensure that we were not just impacted with knowledge but are able to apply that knowledge in our professional journey. If you're looking for a training institute that combines technical expertise with a genuine commitment to client satisfaction, Amdor Analytics is the way to go. I highly recommend them for anyone looking to leverage data for strategic advantage.",
       rating:5,
-      avatar: img
+      avatar: img1
     },
     {
-      name: "Akise",
+      name: "Bolaji",
       description: "I recently completed the data analysis program with Amdor Analytics, and the experience has been transformative. The program provided me with practical, hands-on training in key tools such as Excel, Power BI, and SQL, all of which have greatly enhanced my data analysis capabilities. Excel helped me develop a deeper understanding of data manipulation and advanced functions, enabling me to organize and analyze large datasets more efficiently. Power BI introduced me to dynamic data visualization, allowing me to create insightful, interactive dashboards that have become invaluable for reporting and presenting data-driven insights. SQL, on the other hand, has empowered me to retrieve, query, and manage data from complex databases, streamlining the data extraction process and improving my analytical workflow. The instructors were incredibly supportive, offering clear guidance and ensuring that I could apply what I learned to real-world scenarios. The combination of these powerful tools, along with the hands-on projects, has equipped me with the skills and confidence to tackle any data analysis challenge. I highly recommend Amdor Analytics to anyone looking to sharpen their skills in data analysis. This program has been instrumental in advancing my professional development.",
       rating:5,
-      avatar: img
+      avatar: img2
     },
     {
-      name: "Sarah",
+      name: "Femi Yusuf",
       description: "Choosing AMDOR ANALYTICS to advance my data analytics skills was one of the best decisions for my career. Their comprehensive curriculum, hands-on training, and expert guidance have significantly enhanced my abilities. The program goes beyond the basics, immersing you in the industry-relevant tools like Excel, Power BI, and SQL. The instructors are not only knowledgeable but genuinely invested in your growth, ensuring you're confident in applying what you’ve learned to real-world scenarios. AMDOR ANALYTICS exceeded my expectations, and I highly recommend their programs to anyone looking to elevate their data analytics career.",
       rating:4,
-      avatar: img
+      avatar: img3
     },
 
   ]
@@ -99,7 +102,7 @@ const Testimonial = () => {
       )}
    
     <div className='w-[90%] mx-auto mt-28'>
-       <h2 className='text-[#01D300] font-semibold uppercase text-3xl'>OUR TESTIMONIALS</h2>
+       <h2 className='text-[#3AA619] font-semibold uppercase text-3xl'>OUR TESTIMONIALS</h2>
       <div className='flex justify-between mt-6'>
         <p className='w-[70%] sm:w-full font-normal hidden text-[#59595A]'>Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.</p>
         <button className='h-[60px] hidden bg-[#fff] px-5 rounded-lg text-[#262626]'>View All</button>
@@ -109,7 +112,7 @@ const Testimonial = () => {
         <img src={photo1} className='h-[300px] object-cover w-full' alt="" />
         <div className='absolute top-0 h-full flex justify-center items-center left-0 right-0 w-full bg-[#000000c3]'>
 <div onClick={open1} className='w-[60px] h-[60px] cursor-pointer flex justify-center items-center rounded-full bg-white'>
-  <FaPlay  color='#01D300' />
+  <FaPlay  color='#3AA619' />
 </div>
         </div>
        </div>
@@ -118,7 +121,7 @@ const Testimonial = () => {
         <img src={photo2} className='h-[300px] object-cover w-full' alt="" />
         <div className='absolute top-0 h-full flex justify-center items-center left-0 right-0 w-full bg-[#000000c3]'>
 <div onClick={open1} className='w-[60px] h-[60px] cursor-pointer flex justify-center items-center rounded-full bg-white'>
-  <FaPlay color='#01D300' />
+  <FaPlay color='#3AA619' />
 </div>
         </div>
        </div>
@@ -126,7 +129,7 @@ const Testimonial = () => {
         <img src={photo3} className='h-[300px] object-cover w-full' alt="" />
         <div className='absolute top-0 h-full flex justify-center items-center left-0 right-0 w-full bg-[#000000c3]'>
 <div onClick={open1} className='w-[60px] h-[60px] cursor-pointer flex justify-center items-center rounded-full bg-white'>
-  <FaPlay color='#01D300' />
+  <FaPlay color='#3AA619' />
 </div>
         </div>
        </div>
@@ -134,7 +137,7 @@ const Testimonial = () => {
         <img src={photo4} className='h-[300px] object-cover w-full' alt="" />
         <div className='absolute top-0 h-full flex justify-center items-center left-0 right-0 w-full bg-[#000000c3]'>
 <div onClick={open1} className='w-[60px] h-[60px] cursor-pointer flex justify-center items-center rounded-full bg-white'>
-  <FaPlay color='#01D300' />
+  <FaPlay color='#3AA619' />
 </div>
         </div>
        </div>
@@ -161,7 +164,7 @@ const Testimonial = () => {
               {isExpanded ? description : `${shortDescription}...`} {description.length > 200 && (
               <button
                 onClick={() => toggleSeeMore(idx)}
-                className='text-[#01D300] mt-2'
+                className='text-[#3AA619] mt-2'
               >
                 {isExpanded ? 'See Less' : 'See More'}
               </button>
@@ -172,7 +175,7 @@ const Testimonial = () => {
           
               <div className='w-full mt-5 pt-10 pb-3 h-[50px] rounded-lg bg-[#FCFCFD] flex justify-between items-center'>
             <div className='flex gap-4'>
-              <img src={avatar} className='w-[50px] h-[50px] rounded-lg' alt={description} /> <h2 className='my-auto'>{name}</h2>
+              <img src={avatar} className='w-[80px] h-[80px] object-cover rounded-lg' alt={description} /> <h2 className='my-auto'>{name}</h2>
             </div>
             <button className='h-[50px] bg-[#F7F7F8] px-5 rounded-lg text-[#262626]' style={{border: '1px solid #F1F1F3'}}>Read Full Story</button>
               </div>

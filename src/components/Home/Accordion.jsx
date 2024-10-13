@@ -73,12 +73,12 @@ const AccordionItem = ({ title, description, li1, li2, li3, li4, isOpen, onClick
              : { height: "0px" }
          }
        >
-         <div className="answer-content text-[#01D300] ml-4 mr-3 pb-3">
-            {description && <p className='text-[#01D300]'>{description}</p>}
-           {li1 &&   <li className='text-[#01D300]'>{li1}</li>}
-             {li2 && <li className='text-[#01D300]'>{li2}</li>}
-             {li3 != "" && <li className='text-[#01D300]'>{li3}</li>}
-             {li4 != "" && <li className='text-[#01D300]'>{li4}</li>}
+         <div className="answer-content text-[#3AA619] ml-4 mr-3 pb-3">
+            {description && <p className='text-[#3AA619]'>{description}</p>}
+           {li1 &&   <li className='text-[#3AA619]'>{li1}</li>}
+             {li2 && <li className='text-[#3AA619]'>{li2}</li>}
+             {li3 != "" && <li className='text-[#3AA619]'>{li3}</li>}
+             {li4 != "" && <li className='text-[#3AA619]'>{li4}</li>}
            <div className='h-5 sm:h-2 w-full'></div>
          </div>
        </div>

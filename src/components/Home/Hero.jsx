@@ -19,7 +19,7 @@ const Hero = () => {
                             <MdOutlineElectricBolt className='' />
                         </div>   
                         <div>
-                        <h2 className='font-semibold text-5xl sm:text-[22px] ml-3 my-auto'><span className='text-[#01D300]'>Unlock</span> Your Tech Potential, <br /> </h2>
+                        <h2 className='font-semibold text-5xl sm:text-[22px] ml-3 my-auto'><span className='text-[#3AA619]'>Unlock</span> Your Tech Potential, <br /> </h2>
                         <h2 className='font-semibold text-5xl sm:text-[22px] ml-3 my-auto'>
                             Become a global talent.
                         </h2>
@@ -31,7 +31,7 @@ const Hero = () => {
                 <div className='flex gap-4 w-full justify-center mt-7'>
                     
                     <Link to="/courses">
-                    <button className='h-[60px] bg-[#01D300] px-5 rounded-lg text-white'>Explore Courses</button>
+                    <button className='h-[60px] bg-[#3AA619] px-5 rounded-lg text-white'>Explore Courses</button>
                     </Link>
 
                     <Link to="/signup">

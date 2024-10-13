@@ -1,5 +1,9 @@
 
 import courseBanner from "../../assets/2a1b8774ac452db1e2b7551ba9f4f9f2.png"
+import inst1 from "../../assets/WhatsApp Image 2024-10-12 at 21.23.35.jpeg"
+import inst2 from "../../assets/WhatsApp Image 2024-10-12 at 21.25.00.jpeg"
+import inst3 from "../../assets/WhatsApp Image 2024-10-12 at 22.27.06 2.jpeg"
+import inst4 from "../../assets/WhatsApp Image 2024-10-12 at 23.15.25.jpeg"
 
 const courses = [
     {
@@ -183,7 +187,8 @@ const courses = [
       courseInstructor: [
         {
             name: "Oluwatosin Saeedat",
-  description: "Oluwatosin Saeedat is a skilled Business Analyst and Writer with a strong foundation in data analysis and business process improvement. With experience across various sectors, she is passionate about identifying gaps, gathering requirements, and implementing strategic solutions that enhance business performance. As an educator and mentor, Oluwatosin is committed to guiding aspiring business analysts, simplifying complex concepts, and supporting them in achieving their professional goals. Her unique blend of analytical expertise and storytelling allows her to bridge data-driven insights with impactful communication, making a meaningful difference in both business and content creation." 
+  description: "Oluwatosin Saeedat is a skilled Business Analyst and Writer with a strong foundation in data analysis and business process improvement. With experience across various sectors, she is passionate about identifying gaps, gathering requirements, and implementing strategic solutions that enhance business performance. As an educator and mentor, Oluwatosin is committed to guiding aspiring business analysts, simplifying complex concepts, and supporting them in achieving their professional goals. Her unique blend of analytical expertise and storytelling allows her to bridge data-driven insights with impactful communication, making a meaningful difference in both business and content creation." ,
+  img: inst1
         }
       ],
       coursesBenefits: {
@@ -346,7 +351,8 @@ const courses = [
       courseInstructor: [
         {
             name: "Chukwuka Chinyere",
-  description: "Chinyere is a seasoned tech professional with over 7 years of experience in data analytics and data science. As the founder of Amdor Analytics, she has successfully guided individuals with no prior technology skills to smoothly transition into tech and secure their first roles Renowned for her straightforward and effective teaching methods. Chinyere has personally trained over 5,000 participants. Her expertise spans across the telecommunications, Governance, financial, and edtech sectors." 
+  description: "Chinyere is a seasoned tech professional with over 7 years of experience in data analytics and data science. As the founder of Amdor Analytics, she has successfully guided individuals with no prior technology skills to smoothly transition into tech and secure their first roles Renowned for her straightforward and effective teaching methods. Chinyere has personally trained over 5,000 participants. Her expertise spans across the telecommunications, Governance, financial, and edtech sectors." ,
+  img: inst2
         },
         {
             name: "Yakubu",
@@ -452,7 +458,8 @@ const courses = [
       courseInstructor: [
         {
             name: "Blessing Ibrahim",
-  description: "Ibrahim Blessing have about 5 years of experience as a data analyst, backed by a solid foundation in mathematics. Graduated with First Class Honors. Blessing has personally trained over 2,000 participants. Her expertise spans across the institutions and edtech sectors." 
+  description: "Ibrahim Blessing have about 5 years of experience as a data analyst, backed by a solid foundation in mathematics. Graduated with First Class Honors. Blessing has personally trained over 2,000 participants. Her expertise spans across the institutions and edtech sectors." ,
+  img: inst3
         }
       ],
       coursesBenefits: {
@@ -613,7 +620,8 @@ const courses = [
       courseInstructor: [
         {
             name: "Chinedu Oguaghamba",
-  description: "Chinedu Oguaghamba is an experienced technology professional with specialization in Network and Security, System Administration and Support, and IT Service Management. With enterprise experience across various sectors, he is passionate about emerging technology trends and risk. As an educator, Chinedu is an advocate of continuous learning and growth and is always happy to teach and implement the holistic view of risk management in cyberspace." 
+  description: "Chinedu Oguaghamba is an experienced technology professional with specialization in Network and Security, System Administration and Support, and IT Service Management. With enterprise experience across various sectors, he is passionate about emerging technology trends and risk. As an educator, Chinedu is an advocate of continuous learning and growth and is always happy to teach and implement the holistic view of risk management in cyberspace." ,
+  img: inst4
         }
       ],
       coursesBenefits: {

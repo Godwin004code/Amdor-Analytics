@@ -2,16 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { HiOutlineXMark } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
 
-function Popup() {
-  const [showPopup, setShowPopup] = useState(false);
+function Popup({showPopup, setShowPopup}) {
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-    }, 2000); // 5 seconds
-
-    return () => clearTimeout(timer); // Cleanup timer on unmount
-  }, []);
+  
 
   return (
     <>
@@ -35,7 +28,7 @@ function Popup() {
               <input type="number" className='block w-full mt-3 pl-3 py-3 rounded-lg' placeholder='Enter Phone Number' name="num" id="num" style={{ border: '1px solid #F1F1F3' }} />
             </div>
             <Link target='blank' to="https://chat.whatsapp.com/Glef2h4zDdH89ToZqYOeRZ">
-              <button className='h-[55px] sm:mb-5 mt-10 w-full rounded-lg text-white bg-[#01D300]'>Join Community</button></Link>
+              <button className='h-[55px] sm:mb-5 mt-10 w-full rounded-lg text-white bg-[#3AA619]'>Join Community</button></Link>
           </div>
         </div>
       )}

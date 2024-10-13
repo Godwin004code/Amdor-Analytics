@@ -21,7 +21,7 @@ const ExploreCourses = () => {
     <div className='w-[90%] mx-auto mt-28' style={{marginTop: window.location.pathname === '/learn' ? '20px' : '100px'}}>
       
       <div className='flex  sm:gap-3 justify-between mt-6' style={{display: window.location.pathname === '/learn' ? 'none' : 'flex'}}>
-      <h2 className='text-[#01D300] my-auto font-semibold text-3xl' style={{display: window.location.pathname === '/learn' ? 'none' : 'block'}}>EXPLORE OUR COURSES</h2>
+      <h2 className='text-[#3AA619] my-auto font-semibold text-3xl' style={{display: window.location.pathname === '/learn' ? 'none' : 'block'}}>EXPLORE OUR COURSES</h2>
         {path != '/coures' && <Link to="/courses">
           <button className='h-[60px] bg-[#fff] px-5 rounded-lg text-[#262626]'>View All</button>
         </Link>}
@@ -36,7 +36,7 @@ const ExploreCourses = () => {
                 <div className={ `bg-white mb-8 absolute h-full z-10  pointer-events-none transform transition-all  duration-[3000] ease-in-out p-5 rounded-lg flex flex-col justify-between
                 ${showDes === idx ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
                 <h2>{description}</h2>
-                <div className='w-full ml-auto mt-5 h-[50px] rounded-lg bg-[#01D300] flex justify-center items-center text-[#fff] font-medium'>
+                <div className='w-full ml-auto mt-5 h-[50px] rounded-lg bg-[#3AA619] flex justify-center items-center text-[#fff] font-medium'>
                           Get it Now
                               </div>
                               </div>
@@ -51,7 +51,7 @@ const ExploreCourses = () => {
                
               </div>
               <div className='my-auto flex gap-3'>
-                <h2 className='text-[#01d300]'>{price}</h2>
+                <h2 className='text-[#3AA619]'>{price}</h2>
                 <h2 className='text-[#262626] line-through'>{level}</h2>
               </div>
               </div>
@@ -84,7 +84,7 @@ const ExploreCourses = () => {
                 <div className={ `bg-white absolute h-full z-10  pointer-events-none transform transition-all  duration-[3000] ease-in-out p-5 rounded-lg flex flex-col justify-between
                 ${showDes === idx ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
                 <h2>{description}</h2>
-                <div className='w-full ml-auto mt-5 h-[50px] rounded-lg bg-[#01D300] flex justify-center items-center text-[#fff] font-medium'>
+                <div className='w-full ml-auto mt-5 h-[50px] rounded-lg bg-[#3AA619] flex justify-center items-center text-[#fff] font-medium'>
                           Get it Now
                               </div>
                               </div>
@@ -99,7 +99,7 @@ const ExploreCourses = () => {
                
               </div>
               <div className='my-auto flex gap-3'>
-                <h2 className='text-[#01d300]'>{price}</h2>
+                <h2 className='text-[#3AA619]'>{price}</h2>
                 <h2 className='text-[#262626] line-through'>{level}</h2>
               </div>
               </div>

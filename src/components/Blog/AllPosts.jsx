@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const AllPosts = ({posts}) => {
   return (
     <div className='w-[90%]  mx-auto'>
-        <h2 className='text-[#01D300] my-auto font-semibold text-3xl'>All Posts</h2>
+        <h2 className='text-[#3AA619] my-auto font-semibold text-3xl'>All Posts</h2>
         <section className='flex sm:flex-col sm:w-full justify-between flex-wrap mt-0'>
             {posts.map((item, idx) => {
                 const {img, title, snapshot, author, createdDate} = item

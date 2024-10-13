@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Nav from '../Global/Nav'
 import Hero from './Hero'
 import StudentWork from './StudentWork'
@@ -16,20 +16,29 @@ import { Link } from 'react-router-dom'
 
 
 const Home = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 2000); // 5 seconds
+
+    return () => clearTimeout(timer); // Cleanup timer on unmount
+  }, []);
   return (
   
     <section className='bg-[#F7F7F8]'>
-<Popup />
+<Popup showPopup={showPopup} setShowPopup={setShowPopup} />
    
     <section className='h-[100vh] top-0 rounded-[999px] rounded-tl-none rounded-bl-none left-[-600px] sm:h-[80vh] sm:left-[00px]  w-[40%] sm:w-full bg-[#AAF0AA33]'>
    <section className='w-full absolute'>
-   <section className='w-full z-40 bg-[#01D300]'>
+   <section className='w-full z-40 bg-[#3AA619]'>
     <section className=' py-2 flex justify-between w-[90%] mx-auto'>
       <h2 className='sm:hidden'></h2>
 <h2 className='text-center text-white text-base'>Join Our Next Free Masterclass</h2>
-<Link to="/signup">
-<h2 className='text-[#fff] font-light '>Sign Up</h2>
-</Link>
+
+<h2 className='text-[#fff] font-light cursor-pointer' onClick={() => setShowPopup(true)}>Get Started</h2>
+
     </section>
     </section>
     <Nav />

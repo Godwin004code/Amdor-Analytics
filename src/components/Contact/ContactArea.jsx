@@ -5,7 +5,8 @@ import { FaXTwitter, FaLinkedin } from "react-icons/fa6";
 
 const ContactArea = () => {
     return (
-        <div className='flex sm:flex-col w-[90%] sm:mt-[-50px] mt-[-500px] mx-auto '>
+
+        <div className='flex sm:flex-col w-[90%] mt-[-350px] sm:mt-20 mx-auto '>
             <section className='bg-[#3AA6191A] sm:w-full w-[60%] rounded-tl-xl sm:rounded-none  sm:rounded-bl-0 rounded-bl-xl  sm:p-2 sm:py-5  p-20'>
                 <div className='flex gap-10 sm:gap-2 w-full mb-7'>
                     <div className='flex w-full flex-col gap-2'>
@@ -61,12 +62,12 @@ const ContactArea = () => {
                 </div>
                 <div className='bg-[#3AA6191A] h-[220px] flex flex-col justify-center items-center rounded-lg'>
                     <div className='bg-[#F7F7F8] w-[50px] h-[50px] flex justify-center items-center rounded-full'>
-                    <Link>
+                    <Link to="https://x.com/AmdorAnalytics">
               <div className='bg-[#F7F7F8] w-[52px] sm:h-[40px] sm:w-[40px] rounded-lg flex justify-center items-center h-[52px]' style={{ border: '1px solid #F1F1F3' }}>
                 <FaXTwitter size={24} />
               </div>
               </Link>
-              <Link>
+              <Link to="https://www.linkedin.com/company/amdor-analytics/">
              <div className='bg-[#F7F7F8] w-[52px] sm:h-[40px] sm:w-[40px] rounded-lg flex justify-center items-center h-[52px]' style={{ border: '1px solid #F1F1F3' }}>
                 <FaLinkedin size={24} />
               </div>

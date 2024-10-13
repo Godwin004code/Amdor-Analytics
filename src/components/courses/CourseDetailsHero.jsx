@@ -9,6 +9,7 @@ const CourseDetailsHero = ({course}) => {
         <h2 className='text-[#262626] font-semibold sm:text-3xl text-5xl'>{course.title}</h2>
     </div>
     <div className='w-[50%] sm:w-full'>
+      <h2>Course Description:</h2>
         <p className='font-light text-[#59595A] text-base sm:text-base sm:mt-3'>{course.description}</p>
     </div>
     

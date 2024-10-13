@@ -13,6 +13,7 @@ import Course from './components/courses/Course';
 import CourseDetails from './components/courses/CourseDetails';
 import Login from './components/Auth/Login';
 
+
 function App() {
   return (
    <BrowserRouter>
