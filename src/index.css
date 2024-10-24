@@ -18,3 +18,43 @@ body {
 html, #root {
   overflow-x: hidden !important;
 }
+
+
+
+.slider-container {
+  width: 100%; /* Full width of the slider */
+  overflow: hidden; /* Hide overflowing images */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  animation: scrollLeft 8s linear infinite; /* Scroll from right to left */
+}
+.slider-track2 {
+  display: flex;
+  gap: 10;
+  animation: scrollLeft 80s linear infinite; /* Scroll from right to left */
+  width: 100%;
+}
+
+.slider-image {
+  width: 150px; /* Adjust the width as necessary */
+  margin-right: 20px; /* Space between images */
+  object-fit: contain; /* Ensure images fit */
+}
+
+/* Keyframes for moving images from right to left */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%); /* Start from fully off-screen on the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move fully off-screen to the left */
+  }
+}
+
+

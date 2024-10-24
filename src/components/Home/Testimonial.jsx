@@ -109,7 +109,7 @@ const Testimonial = () => {
       </div>
       <section className='flex gap-10 justify-between sm:gap-10 sm:flex-col mt-10'>
        <div className='w-[25%] sm:w-full relative'>
-        <img src={photo1} className='h-[300px] object-cover w-full' alt="" />
+        <img src={img} className='h-[300px] object-cover w-full' alt="" />
         <div className='absolute top-0 h-full flex justify-center items-center left-0 right-0 w-full bg-[#000000c3]'>
 <div onClick={open1} className='w-[60px] h-[60px] cursor-pointer flex justify-center items-center rounded-full bg-white'>
   <FaPlay  color='#3AA619' />
@@ -118,7 +118,7 @@ const Testimonial = () => {
        </div>
 
        <div className='w-[25%] sm:w-full relative'>
-        <img src={photo2} className='h-[300px] object-cover w-full' alt="" />
+        <img src={img1} className='h-[300px] object-cover w-full' alt="" />
         <div className='absolute top-0 h-full flex justify-center items-center left-0 right-0 w-full bg-[#000000c3]'>
 <div onClick={open1} className='w-[60px] h-[60px] cursor-pointer flex justify-center items-center rounded-full bg-white'>
   <FaPlay color='#3AA619' />
@@ -126,7 +126,7 @@ const Testimonial = () => {
         </div>
        </div>
        <div className='w-[25%] sm:w-full relative'>
-        <img src={photo3} className='h-[300px] object-cover w-full' alt="" />
+        <img src={img2} className='h-[300px] object-cover w-full' alt="" />
         <div className='absolute top-0 h-full flex justify-center items-center left-0 right-0 w-full bg-[#000000c3]'>
 <div onClick={open1} className='w-[60px] h-[60px] cursor-pointer flex justify-center items-center rounded-full bg-white'>
   <FaPlay color='#3AA619' />
@@ -134,7 +134,7 @@ const Testimonial = () => {
         </div>
        </div>
        <div className='w-[25%] sm:w-full relative'>
-        <img src={photo4} className='h-[300px] object-cover w-full' alt="" />
+        <img src={img3} className='h-[300px] object-cover w-full' alt="" />
         <div className='absolute top-0 h-full flex justify-center items-center left-0 right-0 w-full bg-[#000000c3]'>
 <div onClick={open1} className='w-[60px] h-[60px] cursor-pointer flex justify-center items-center rounded-full bg-white'>
   <FaPlay color='#3AA619' />
@@ -142,13 +142,13 @@ const Testimonial = () => {
         </div>
        </div>
       </section>
-      <div className='flex justify-between flex-wrap mt-10'>
+      <div className='flex justify-between w-full  mt-10 slider-track2 gap-10'>
         {testimony.map((item, idx) => {
           const {name, description,rating, avatar} = item
           const isExpanded = expanded[idx]; // Check if current testimonial is expanded
           const shortDescription = description.slice(0, 200); // Limit description length
           return (
-            <div className='bg-white mb-8 w-[49%] sm:w-full rounded-xl p-8' key={idx} style={{border: '1px solid #F1F1F3'}}>
+            <div className='bg-white mb-8 w-[500px] sm:w-full rounded-xl p-8' key={idx} style={{border: '1px solid #F1F1F3'}}>
               <div className='flex  w-fit'>
                 {
                   Array(rating).fill(0).map((item, idx) => {

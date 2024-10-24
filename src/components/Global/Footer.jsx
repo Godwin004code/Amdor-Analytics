@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../../assets/amdor-new-logo.png"
+import logo from "../../assets/WHITEEE.jpg"
 import { Link } from 'react-router-dom'
 
 import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
@@ -8,20 +8,20 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className='bg-white mt-16'>
+    <footer className='bg-[#3AA619] mt-16'>
       <section className='w-[90%] py-7 flex sm:flex-col justify-between mx-auto'>
         <div className='w-[30%] sm:w-full'>
-          <Link to="/"> <img className='w-[125px] h-[100px] object-cover' src={logo} alt="Amdor Analytics" /></Link>
-          <p >At Amdor Analytics, we are dedicated to empowering individuals to become global talents through comprehensive and accessible training. Our mission is to bridge the skills gap and enable learners to acquire in-demand skills, empowering them to make informed decisions, drive innovation, and create positive change in a tech-driven world.</p>
+          <Link to="/"> <img className='w-[150px] h-[130px] object-cover' src={logo} alt="Amdor Analytics" /></Link>
+          <p className='text-white'>At Amdor Analytics, we are dedicated to empowering individuals to become global talents through comprehensive and accessible training. Our mission is to bridge the skills gap and enable learners to acquire in-demand skills, empowering them to make informed decisions, drive innovation, and create positive change in a tech-driven world.</p>
         </div>
         <div className='mt-6 hidden'>
           <nav>
             <ul className='flex flex-col'>
-              <li className='mb-2 sm:mb-0 flex font-semibold text-[#262626] items-center  rounded-lg'>
+              <li className='mb-2 sm:mb-0 flex font-semibold text-[#fff] items-center  rounded-lg'>
                 Home
               </li>
               <li className='mb-2 flex mt-6 sm:mt-3  items-center  rounded-lg'>
-                <Link to="/learn">Benefits</Link>
+                <Link to="/learn" className='text-white'>Benefits</Link>
               </li>
               <li className='mb-2 flex  items-center   rounded-lg'>
                 <Link to="/courses">Our Courses</Link>
@@ -40,20 +40,20 @@ const Footer = () => {
         <div className='mt-6' >
           <nav>
             <ul className='flex flex-col'>
-              <li className='mb-2 sm:mb-0 flex font-semibold text-[#262626]  items-center  rounded-lg'>
+              <li className='mb-2 sm:mb-0 flex font-semibold text-[#fff]  items-center  rounded-lg'>
                 Quick Links
               </li>
               <li className='mb-2 mt-6 sm:mt-3 flex  items-center  rounded-lg'>
-                <Link to="/learn">About</Link>
+                <Link to="/learn" className='text-white'>About</Link>
               </li>
               <li className='mb-2 flex  items-center   rounded-lg'>
-                <Link to="/courses">Our Courses</Link>
+                <Link to="/courses" className='text-white'>Our Courses</Link>
               </li>
               <li className='mb-2 flex  items-center   rounded-lg'>
-                <Link to="/blog">Blog</Link>
+                <Link to="/blog" className='text-white'>Blog</Link>
               </li>
               <li className='mb-2 flex  items-center   rounded-lg'>
-                <Link to="/pricing">Contact</Link>
+                <Link to="/pricing" className='text-white'>Contact</Link>
               </li>
 
 
@@ -61,7 +61,7 @@ const Footer = () => {
           </nav>
         </div>
         <div className='mt-6'>
-          <li className='mb-2 flex font-semibold text-[#262626]  px-0 rounded-lg'>
+          <li className='mb-2 flex font-semibold text-[#fff]  px-0 rounded-lg'>
             Social Profiles
           </li>
           <nav className='mt-6 sm:mt-3'>
@@ -102,14 +102,14 @@ const Footer = () => {
             </ul>
           </nav>
           <div>
-            <h2 className='mt-4'>Phone Numbers: +2348114087403</h2>
+            <h2 className='mt-4 text-white'>Phone Numbers: +2348114087403</h2>
            
-            <h2 className='mt-4'>Email: amdoranalytics@gmail.com</h2>
+            <h2 className='mt-4 text-white'>Email: amdoranalytics@gmail.com</h2>
           </div>
         </div>
       </section>
       <section className='w-[90%] py-7 mx-auto' style={{ borderTop: '1px solid #F1F1F3' }}>
-        <h2 className='text-sm font-normal text-[#656567] text-center'>© 2024 Amdor Analytics. All rights reserved.</h2>
+        <h2 className='text-sm font-normal text-[#fff] text-center'>© 2024 Amdor Analytics. All rights reserved.</h2>
       </section>
     </footer>
   )
