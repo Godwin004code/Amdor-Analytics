@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import logo from "../../assets/amdor-new-logo.png";
 import { Link } from "react-router-dom";
 import { HiOutlineX } from "react-icons/hi";
@@ -6,11 +7,31 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 
 const Nav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const linkItems = ["link1", "link2", "link3"];
-  const courseItems = ["course1", "course2", "course3"];
+
+  const linkItems = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Courses", path: "/courses" },
+    { name: "Blog", path: "/blog" },
+    { name: "Contact Us", path: "/contact" },
+  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const menuVariants = {
+    open: { x: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
+    closed: { x: "100%", opacity: 0, transition: { duration: 0.5, ease: "easeIn" } },
+  };
+
+  const linkVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: (index) => ({
+      opacity: 1,
+      x: 0,
+      transition: { delay: index * 0.1, duration: 0.3 },
+    }),
   };
 
   return (
@@ -32,87 +53,48 @@ const Nav = () => {
         </button>
 
         <nav className="flex w-full justify-between items-center md:hidden ml-8">
-          <ul className=" flex space-x-8 items-center">
-            {/* Learn Menu */}
-            <li className="relative group">
-              <Link className="text-base font-medium text-black hover:text-[#3AA619]">
-                Learn
-              </Link>
-              <div className="absolute hidden group-hover:flex flex-col w-full p-1 shadow-lg">
-                {linkItems.map((item, index) => (
-                  <Link
-                    key={index}
-                    className="block py-1 font-semibold text-gray-500 hover:text-black"
-                    to="/learn"
-                  >
-                    {item}
-                  </Link>
-                ))}
-              </div>
-            </li>
+          <motion.ul className="flex space-x-8 items-center">
+            {linkItems.map((item, index) => (
+              <motion.li
+                key={index}
+                variants={linkVariants}
+                initial="hidden"
+                animate="visible"
+                custom={index}
+                className="relative group"
+              >
+                <Link to={item.path} className="text-base font-medium text-black hover:text-[#3AA619]">
+                  {item.name}
+                </Link>
+              </motion.li>
+            ))}
+          </motion.ul>
 
-            <li className="relative group">
-              <Link className="text-base font-medium text-black hover:text-[#3AA619]">
-                Courses
-              </Link>
-              <div className="absolute hidden group-hover:flex flex-col w-full p-1 shadow-lg">
-                {courseItems.map((item, index) => (
-                  <Link
-                    key={index}
-                    className="block py-1 font-semibold text-gray-500 hover:text-black"
-                    to="/courses"
-                  >
-                    {item}
-                  </Link>
-                ))}
-              </div>
-            </li>
-
-            <li>
-              <Link
-                to="/about"
-                className="text-base font-medium hover:text-[#3AA619]"
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog"
-                className="text-base font-medium hover:text-[#3AA619]"
-              >
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className="text-base font-medium hover:text-[#3AA619]"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
           <div className="flex space-x-5 items-center ml-auto">
-            <Link className="text-lg text-[#262626] font-medium " to="/signup">
-              Sign up
-            </Link>
-            <button className="h-[55px] w-[117px] rounded-lg text-white bg-[#3AA619]">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link className="text-lg text-[#262626] font-medium" to="/signup">
+                Sign up
+              </Link>
+            </motion.div>
+            <motion.button
+              whileHover={{ scale: 1.05, backgroundColor: "#2e8c17" }}
+              whileTap={{ scale: 0.95 }}
+              className="h-[55px] w-[117px] rounded-lg text-white bg-[#3AA619]"
+            >
               Login
-            </button>
+            </motion.button>
           </div>
         </nav>
       </div>
 
       {/* Mobile Navigation Container */}
-      <div
-        className={`${
-          isMobileMenuOpen
-            ? "left-[0%] pointer-events-auto"
-            : "left-[100%] pointer-events-none"
-        } fixed bg-white h-full w-full z-[100] overflow-auto left-0 top-0 text-black duration-500 ease-in-out`}
+      <motion.div
+        initial="closed"
+        animate={isMobileMenuOpen ? "open" : "closed"}
+        variants={menuVariants}
+        className="fixed bg-white h-full w-full z-[100] overflow-auto top-0 text-black"
       >
-        {/* Container for logo and close button */}
+        {/* Logo and close button */}
         <div className="w-[90%] mx-auto mb-[40px] flex justify-between">
           <Link to="/">
             <img src={logo} className="w-[150px] ml-0" alt="logo" />
@@ -122,40 +104,31 @@ const Nav = () => {
           </button>
         </div>
 
-        <ul className="flex my-auto gap-16 w-[90%] mx-auto flex-col text-3xl sm:text-xl sm:gap-8">
-          <li>
-            <Link to="/" className="font-medium hover:text-[#3AA619]">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="font-medium hover:text-[#3AA619]">
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link to="/courses" className="font-medium hover:text-[#3AA619]">
-              Courses
-            </Link>
-          </li>
-          <li>
-            <Link to="/blog" className="font-medium hover:text-[#3AA619]">
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="font-medium hover:text-[#3AA619]">
-              Contact Us
-            </Link>
-          </li>
-
+        <motion.ul className="flex my-auto gap-16 w-[90%] mx-auto flex-col text-3xl sm:text-xl sm:gap-8">
+          {linkItems.map((item, index) => (
+            <motion.li
+              key={index}
+              variants={linkVariants}
+              initial="hidden"
+              animate="visible"
+              custom={index}
+            >
+              <Link to={item.path} className="font-medium hover:text-[#3AA619]">
+                {item.name}
+              </Link>
+            </motion.li>
+          ))}
           <Link to="/signup">
-            <button className="bg-[#3AA619] text-white w-full mt-[80px] rounded-md py-4 px-10">
+            <motion.button
+              className="bg-[#3AA619] text-white w-full mt-[80px] rounded-md py-4 px-10"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               Get Started
-            </button>
+            </motion.button>
           </Link>
-        </ul>
-      </div>
+        </motion.ul>
+      </motion.div>
     </header>
   );
 };
