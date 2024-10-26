@@ -3,15 +3,15 @@ import YouTube from 'react-youtube';
 
 const YTComponent = ({videoId}) => {
   const videoOptions = {
-    height: '350',
+    height: '100%',
     width: '100%',
     playerVars: {
       autoplay: 1,
-    },
+      mute:1    },
   };
 
   return (
-    <YouTube videoId={videoId} opts={videoOptions} />
+    <YouTube videoId={videoId} opts={videoOptions} className='border-4'/>
   );
 };
 

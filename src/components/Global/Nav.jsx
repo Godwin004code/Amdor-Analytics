@@ -31,50 +31,27 @@ const Nav = () => {
     closed: { x: "100%", opacity: 0, transition: { duration: 0.75, ease: "easeIn" } },
   };
 
-  const linkVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: (index) => ({
-      opacity: 1,
-      x: 0,
-      transition: { delay: index * 0.1, duration: 1.00 },
-    }),
-  };
-
   return (
     <header className="w-full">
       <div className="w-[90%] flex items-center mx-auto border-[#F1F1F3]">
         <Link to="/">
-          <img
-            className="w-[125px] h-[100px] object-cover"
-            src={logo}
-            alt="Logo"
-          />
+          <img className="w-[125px] h-[100px] object-cover" src={logo} alt="Logo" />
         </Link>
 
-        <button
-          onClick={toggleMobileMenu}
-          className="hidden md:block ml-auto z-20"
-        >
+        <button onClick={toggleMobileMenu} className="hidden md:block ml-auto z-20">
           <HiBars3BottomRight size={30} className="text-black" />
         </button>
 
         <nav className="flex w-full justify-between items-center md:hidden ml-8">
-          <motion.ul className="flex space-x-8 items-center">
+          <motion.ul className="flex space-x-8 items-center lg:space-x-2">
             {/* Learn Dropdown */}
-            <motion.li
-              className="relative group"
-              initial="hidden"
-              animate="visible"
-              variants={linkVariants}
-            >
-              <Link className="text-base font-medium text-black hover:text-[#3AA619]">
-                Learn
-              </Link>
-              <div className="absolute hidden group-hover:flex flex-col w-full p-1 shadow-lg bg-white">
+            <motion.li className="relative group" initial="hidden" animate="visible">
+              <Link className="text-base font-medium text-black hover:text-[#3AA619]">Learn</Link>
+              <div className="absolute hidden group-hover:flex flex-col w-[50vh] p-1 shadow-lg bg-opacity-25 bg-white rounded-lg">
                 {learnItems.map((item, index) => (
                   <Link
                     key={index}
-                    className="block py-1 font-semibold text-gray-500 hover:text-black"
+                    className="block w-[50vh] text-center py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white"
                     to="/learn"
                   >
                     {item}
@@ -84,20 +61,13 @@ const Nav = () => {
             </motion.li>
 
             {/* Courses Dropdown */}
-            <motion.li
-              className="relative group"
-              initial="hidden"
-              animate="visible"
-              variants={linkVariants}
-            >
-              <Link className="text-base font-medium text-black hover:text-[#3AA619]">
-                Courses
-              </Link>
-              <div className="absolute hidden group-hover:flex flex-col w-full p-1 shadow-lg bg-white">
+            <motion.li className="relative group" initial="hidden" animate="visible">
+              <Link className="text-base font-medium text-black hover:text-[#3AA619]">Courses</Link>
+              <div className="absolute hidden group-hover:flex flex-col w-[50vh] p-1 shadow-lg bg-opacity-25 bg-white rounded-lg">
                 {courseItems.map((item, index) => (
                   <Link
                     key={index}
-                    className="block py-1 font-semibold text-gray-500 hover:text-black"
+                    className="block w-[50vh] text-center py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white"
                     to="/courses"
                   >
                     {item}
@@ -108,14 +78,7 @@ const Nav = () => {
 
             {/* Regular Links */}
             {linkItems.map((item, index) => (
-              <motion.li
-                key={index}
-                variants={linkVariants}
-                initial="hidden"
-                animate="visible"
-                custom={index}
-                className="relative group"
-              >
+              <motion.li key={index} initial="hidden" animate="visible">
                 <Link to={item.path} className="text-base font-medium text-black hover:text-[#3AA619]">
                   {item.name}
                 </Link>
@@ -124,14 +87,14 @@ const Nav = () => {
           </motion.ul>
 
           <div className="flex space-x-5 items-center ml-auto">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link className="text-lg text-[#262626] font-medium" to="/signup">
                 Sign up
               </Link>
             </motion.div>
             <motion.button
               whileHover={{ scale: 1.05, backgroundColor: "#2e8c17" }}
-              whileTap={{ scale: 0.95 }} 
+              whileTap={{ scale: 0.95 }}
               className="h-[55px] w-[117px] rounded-lg text-white bg-[#3AA619]"
             >
               Login
@@ -147,7 +110,6 @@ const Nav = () => {
         variants={menuVariants}
         className="fixed bg-white h-full w-full z-[100] overflow-auto top-0 text-black"
       >
-        {/* Logo and close button */}
         <div className="w-[90%] mx-auto mb-[40px] flex justify-between">
           <Link to="/">
             <img src={logo} className="w-[150px] ml-0" alt="logo" />
@@ -158,20 +120,12 @@ const Nav = () => {
         </div>
 
         <motion.ul className="flex my-auto gap-8 w-[90%] mx-auto flex-col text-xl sm:text-xl">
-          {/* Mobile Menu Links */}
-          <motion.li
-            className="font-medium hover:text-[#3AA619] cursor-pointer"
-            onClick={toggleLearn}
-          >
+          <motion.li className="font-medium hover:text-[#3AA619] cursor-pointer" onClick={toggleLearn}>
             Learn
             {isLearnOpen && (
-              <motion.ul
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="ml-4 flex flex-col space-y-2 text-lg text-gray-600"
-              >
+              <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col space-y-2 text-lg">
                 {learnItems.map((item, index) => (
-                  <Link key={index} to="/learn">
+                  <Link key={index} to="/learn" className="block w-full py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white">
                     {item}
                   </Link>
                 ))}
@@ -179,19 +133,12 @@ const Nav = () => {
             )}
           </motion.li>
 
-          <motion.li
-            className="font-medium hover:text-[#3AA619] cursor-pointer"
-            onClick={toggleCourses}
-          >
+          <motion.li className="font-medium hover:text-[#3AA619] cursor-pointer" onClick={toggleCourses}>
             Courses
             {isCoursesOpen && (
-              <motion.ul
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="ml-4 flex flex-col space-y-2 text-lg text-gray-600"
-              >
+              <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col space-y-2 text-lg">
                 {courseItems.map((item, index) => (
-                  <Link key={index} to="/courses">
+                  <Link key={index} to="/courses" className="block w-full py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white">
                     {item}
                   </Link>
                 ))}
@@ -200,13 +147,7 @@ const Nav = () => {
           </motion.li>
 
           {linkItems.map((item, index) => (
-            <motion.li
-              key={index}
-              variants={linkVariants}
-              initial="hidden"
-              animate="visible"
-              custom={index}
-            >
+            <motion.li key={index} initial="hidden" animate="visible">
               <Link to={item.path} className="font-medium hover:text-[#3AA619]">
                 {item.name}
               </Link>
