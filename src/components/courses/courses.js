@@ -1,5 +1,10 @@
 
-import courseBanner from "../../assets/2a1b8774ac452db1e2b7551ba9f4f9f2.png"
+import courseBanner from "../../assets/DATA ANALYTICS PICTURE2.jpeg"
+import courseBanner2 from "../../assets/BUSINESS ANALYSIS PICTURE2.webp"
+import courseBanner3 from "../../assets/DATA SCIENCE PICTURE2.jpeg"
+import courseBanner4 from "../../assets/HR ANALYTICS PICTURE.jpeg"
+import courseBanner5 from "../../assets/CYBER SECURITY PICTURE.jpeg"
+import courseBanner6 from "../../assets/DATA ENGINEER2.jpeg"
 import inst1 from "../../assets/WhatsApp Image 2024-10-12 at 21.23.35.jpeg"
 import inst2 from "../../assets/WhatsApp Image 2024-10-12 at 21.25.00.jpeg"
 import inst3 from "../../assets/WhatsApp Image 2024-10-12 at 22.27.06 2.jpeg"
@@ -119,7 +124,7 @@ const courses = [
       price: "N300,000",
       level: "N500,000",
       duration: "5 months",
-      banner: courseBanner,
+      banner: courseBanner2,
       rating:5,
       outline: [
         {
@@ -222,7 +227,7 @@ const courses = [
       price: "N350,000",
       level: "N500,000",
       duration: "5 months",
-      banner: courseBanner,
+      banner: courseBanner3,
       rating:5,
       outline: [
         {
@@ -389,7 +394,7 @@ const courses = [
       price: "N300,000",
       level: "N500,000",
       duration: "5 months",
-      banner: courseBanner,
+      banner: courseBanner4,
       rating:5,
       outline: [
         {
@@ -492,7 +497,7 @@ const courses = [
       price: "N400,000",
       level: "N700,000",
       duration: "5 months",
-      banner: courseBanner,
+      banner: courseBanner5,
       rating:5,
       outline: [
         {
@@ -654,7 +659,7 @@ const courses = [
       price: "N300,000",
       level: "N500,000",
       duration: "5 months",
-      banner: courseBanner,
+      banner: courseBanner6,
       rating:5,
       outline: [
         {
