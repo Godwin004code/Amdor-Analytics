@@ -9,6 +9,8 @@ import inst1 from "../../assets/WhatsApp Image 2024-10-12 at 21.23.35.jpeg"
 import inst2 from "../../assets/WhatsApp Image 2024-10-12 at 21.25.00.jpeg"
 import inst3 from "../../assets/WhatsApp Image 2024-10-12 at 22.27.06 2.jpeg"
 import inst4 from "../../assets/WhatsApp Image 2024-10-12 at 23.15.25.jpeg"
+import inst5 from "../../assets/IMG-20241017-WA0008(1).jpeg"
+import inst6 from "../../assets/Screenshot 2024-10-28 at 14.13.50.png"
 
 const courses = [
     {
@@ -86,11 +88,13 @@ const courses = [
       courseInstructor: [
         {
             name: "Chukwuka Chinyere",
-  description: "Chinyere is a seasoned tech professional with over 7 years of experience in data analytics and data science. As the founder of Amdor Analytics, she has successfully guided individuals with no prior technology skills to smoothly transition into tech and secure their first roles Renowned for her straightforward and effective teaching methods. Chinyere has personally trained over 5,000 participants. Her expertise spans across the telecommunications, Governance, financial, and edtech sectors." 
+  description: "Chinyere is a seasoned tech professional with over 7 years of experience in data analytics and data science. As the founder of Amdor Analytics, she has successfully guided individuals with no prior technology skills to smoothly transition into tech and secure their first roles Renowned for her straightforward and effective teaching methods. Chinyere has personally trained over 5,000 participants. Her expertise spans across the telecommunications, Governance, financial, and edtech sectors." ,
+  img: inst5
         },
         {
             name: "Sandra Asagade",
-  description: "Data Analyst and BI Developer with about 5 years of experience helping clients from diverse sectors harness the power of data analytics identify trends and useful information.She has helped individuals with no prior knowledge to transition into tech.She has successfully trained about 3,000 participants.Her expertise spans across governance and EdTech sectors." 
+  description: "Data Analyst and BI Developer with about 5 years of experience helping clients from diverse sectors harness the power of data analytics identify trends and useful information.She has helped individuals with no prior knowledge to transition into tech.She has successfully trained about 3,000 participants.Her expertise spans across governance and EdTech sectors." ,
+  img: inst6
         }
       ],
       coursesBenefits: {
