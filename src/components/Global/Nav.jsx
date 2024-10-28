@@ -1,112 +1,172 @@
-import React, {useState} from 'react'
-import logo from "../../assets/amdor-new-logo.png"
-import { Link } from 'react-router-dom'
-import { HiOutlineXMark } from "react-icons/hi2";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import logo from "../../assets/amdor-new-logo.png";
+import { Link } from "react-router-dom";
+import { HiOutlineX } from "react-icons/hi";
 import { HiBars3BottomRight } from "react-icons/hi2";
 
 const Nav = () => {
-    const [mobileShown, setMobileShown] = useState(false);
-    function toggleNav() {
-        setMobileShown(!mobileShown);
-      }
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLearnOpen, setIsLearnOpen] = useState(false);
+  const [isCoursesOpen, setIsCoursesOpen] = useState(false);
 
-      // 
+  const linkItems = [
+    { name: "About Us", path: "/about" },
+    { name: "Blog", path: "/blog" },
+    { name: "Contact Us", path: "/contact" },
+  ];
 
-      const path = window.location.pathname;
+  const learnItems = ["link1", "link2", "link3"];
+  const courseItems = ["course1", "course2", "course3"];
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const toggleLearn = () => setIsLearnOpen(!isLearnOpen);
+  const toggleCourses = () => setIsCoursesOpen(!isCoursesOpen);
+
+  const menuVariants = {
+    open: { x: 0, opacity: 1, transition: { duration: 0.75, ease: "easeOut" } },
+    closed: { x: "100%", opacity: 0, transition: { duration: 0.75, ease: "easeIn" } },
+  };
+
   return (
-    <header className='w-full'>
-        <div className='w-[90%]  flex justify-between mx-auto' style={{borderBottom: '1px solid #F1F1F3'}}>
-        <section className='flex'>
-           <Link to="/"> <img className='w-[125px] h-[100px] object-cover' src={logo} alt="Amdor Analytics" /></Link>
-            <nav className='my-auto ml-4 sm:hidden'>
-                <ul className='flex'>
-                    <li className={path === '/learn' ? 'h-[55px] flex bg-[#F1F1F3] justify-center items-center  px-6 rounded-lg' : 'h-[55px] flex justify-center items-center  px-6 rounded-lg'}>
-                        <Link  to="/learn">Learn</Link>
-                    </li>
-                    <li className={path === '/courses' ? 'h-[55px] flex bg-[#F1F1F3] justify-center items-center  px-6 rounded-lg' : 'h-[55px] flex justify-center items-center  px-6 rounded-lg'}>
-                        <Link to="/courses">Courses</Link>
-                    </li>
-                    <li className={path === '/about' ? 'h-[55px] flex bg-[#F1F1F3] justify-center items-center  px-6 rounded-lg' : 'h-[55px] flex justify-center items-center  px-6 rounded-lg'}>
-                        <Link to="/about">About Us</Link>
-                    </li>
-                    <li className={path === '/blog' ? 'h-[55px] flex bg-[#F1F1F3] justify-center items-center  px-6 rounded-lg' : 'h-[55px] flex justify-center items-center  px-6 rounded-lg'}>
-                        <Link to="/blog">Blog</Link>
-                    </li>
-                    <li className={path === '/contact' ? 'h-[55px] flex bg-[#F1F1F3] justify-center items-center  px-6 rounded-lg' : 'h-[55px] flex justify-center items-center  px-6 rounded-lg'}>
-                        <Link to="/contact">Contact</Link>
-                    </li>
+    <header className="w-full">
+      <div className="w-[90%] flex items-center mx-auto border-[#F1F1F3]">
+        <Link to="/">
+          <img className="w-[125px] h-[100px] object-cover" src={logo} alt="Logo" />
+        </Link>
 
-                </ul>
-            </nav>
-        </section>
-        <section className='flex gap-5 my-auto sm:hidden'>
-            <h2 className='my-auto'>
-                <Link className='text-[#262626] font-normal text-lg' to="/signup">Sign up</Link>
-            </h2>
-            <button className='h-[55px] w-[117px] rounded-lg text-white bg-[#3AA619]'>Login</button>
-        </section>
- 
-        <button className="hidden float-right lg:block my-auto  sm:w-fit" onClick={toggleNav}>
-         <HiBars3BottomRight size={30} />
+        <button onClick={toggleMobileMenu} className="hidden md:block ml-auto z-20">
+          <HiBars3BottomRight size={30} className="text-black" />
         </button>
-   
-        </div>
-         {/* container for mobile navigation */}
-         <div
-          className={`${
-            mobileShown
-              ? "left-[0%] pointer-events-auto"
-              : "left-[100%] pointer-events-none"
-          } fixed bg-white h-full w-full z-[100] overflow-auto left-0 top-0 text-black duration-500 ease-in-out`}
-        >
-          {/* Container for logo and cross button */}
-          <div className="w-[90%] mx-auto   mb-[40px] flex justify-between">
-            <Link to="/">
-              {" "}
-              <img src={logo} className="w-[150px] ml-0" alt="logo" />
-            </Link>
-            <button onClick={toggleNav}>
-         <HiOutlineXMark size={30} />
-            </button>
+
+        <nav className="flex w-full justify-between items-center md:hidden ml-8">
+          <motion.ul className="flex space-x-8 items-center lg:space-x-2">
+            {/* Learn Dropdown */}
+            <motion.li className="relative group" initial="hidden" animate="visible">
+              <Link className="text-base font-medium text-black hover:text-[#3AA619]">Learn</Link>
+              <div className="absolute hidden group-hover:flex flex-col w-[50vh] p-1 shadow-lg bg-opacity-25 bg-white rounded-lg">
+                {learnItems.map((item, index) => (
+                  <Link
+                    key={index}
+                    className="block w-[50vh] text-center py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white"
+                    to="/learn"
+                  >
+                    {item}
+                  </Link>
+                ))}
+              </div>
+            </motion.li>
+
+            {/* Courses Dropdown */}
+            <motion.li className="relative group" initial="hidden" animate="visible">
+              <Link className="text-base font-medium text-black hover:text-[#3AA619]">Courses</Link>
+              <div className="absolute hidden group-hover:flex flex-col w-[50vh] p-1 shadow-lg bg-opacity-25 bg-white rounded-lg">
+                {courseItems.map((item, index) => (
+                  <Link
+                    key={index}
+                    className="block w-[50vh] text-center py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white"
+                    to="/courses"
+                  >
+                    {item}
+                  </Link>
+                ))}
+              </div>
+            </motion.li>
+
+            {/* Regular Links */}
+            {linkItems.map((item, index) => (
+              <motion.li key={index} initial="hidden" animate="visible">
+                <Link to={item.path} className="text-base font-medium text-black hover:text-[#3AA619]">
+                  {item.name}
+                </Link>
+              </motion.li>
+            ))}
+          </motion.ul>
+
+          <div className="flex space-x-5 items-center ml-auto">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link className="text-lg text-[#262626] font-medium" to="/signup">
+                Sign up
+              </Link>
+            </motion.div>
+            <motion.button
+              whileHover={{ scale: 1.05, backgroundColor: "#2e8c17" }}
+              whileTap={{ scale: 0.95 }}
+              className="h-[55px] w-[117px] rounded-lg text-white bg-[#3AA619]"
+            >
+              Login
+            </motion.button>
           </div>
+        </nav>
+      </div>
 
-          <ul className="flex my-auto gap-16 w-[90%] mx-auto flex-col text-3xl sm:text-xl sm:gap-8">
-            <li>
-              <Link to="/" className="font-medium">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="font-medium">
-               About us
-              </Link>
-            </li>
-           
-            <li>
-              <Link to="/courses" className="font-medium">
-                Courses
-              </Link>
-            </li>
-            <li>
-              <Link to="/blog" className="font-medium">
-            Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="font-medium">
-                Contact Us
-              </Link>
-            </li>
-
-            <Link to="/signup">
-              <button className="bg-[#3AA619] text-white w-full mt-[80px] rounded-md py-4 px-10">
-                Get Started
-              </button>
-            </Link>
-          </ul>
+      {/* Mobile Navigation Container */}
+      <motion.div
+        initial="closed"
+        animate={isMobileMenuOpen ? "open" : "closed"}
+        variants={menuVariants}
+        className="fixed bg-white h-full w-full z-[100] overflow-auto top-0 text-black"
+      >
+        <div className="w-[90%] mx-auto mb-[40px] flex justify-between">
+          <Link to="/">
+            <img src={logo} className="w-[150px] ml-0" alt="logo" />
+          </Link>
+          <button onClick={toggleMobileMenu}>
+            <HiOutlineX size={30} />
+          </button>
         </div>
-    </header>
-  )
-}
 
-export default Nav
+        <motion.ul className="flex my-auto gap-8 w-[90%] mx-auto flex-col text-xl sm:text-xl">
+          <motion.li className="font-medium hover:text-[#3AA619] cursor-pointer" onClick={toggleLearn}>
+            Learn
+            {isLearnOpen && (
+              <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col space-y-2 text-lg">
+                {learnItems.map((item, index) => (
+                  <Link key={index} to="/learn" className="block w-full py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white">
+                    {item}
+                  </Link>
+                ))}
+              </motion.ul>
+            )}
+          </motion.li>
+
+          <motion.li className="font-medium hover:text-[#3AA619] cursor-pointer" onClick={toggleCourses}>
+            Courses
+            {isCoursesOpen && (
+              <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col space-y-2 text-lg">
+                {courseItems.map((item, index) => (
+                  <Link key={index} to="/courses" className="block w-full py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white">
+                    {item}
+                  </Link>
+                ))}
+              </motion.ul>
+            )}
+          </motion.li>
+
+          {linkItems.map((item, index) => (
+            <motion.li key={index} initial="hidden" animate="visible">
+              <Link to={item.path} className="font-medium hover:text-[#3AA619]">
+                {item.name}
+              </Link>
+            </motion.li>
+          ))}
+
+          <Link to="/signup">
+            <motion.button
+              className="bg-[#3AA619] text-white w-full rounded-md py-4 px-10"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Get Started
+            </motion.button>
+          </Link>
+        </motion.ul>
+      </motion.div>
+    </header>
+  );
+};
+
+export default Nav;
