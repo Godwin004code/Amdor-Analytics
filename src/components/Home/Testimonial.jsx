@@ -6,7 +6,6 @@ import YTComponent from './YTComponent';
 import { testimony } from './TestimonialsData';
 
 const Testimonial = () => {
-  
   const [showPopup, setShowPopup] = useState(false);
   const [selectedTestimonial, setSelectedTestimonial] = useState(null);
 
@@ -29,54 +28,57 @@ const Testimonial = () => {
           <motion.div
             key={index}
             className="flex w-max space-x-4"
-            animate={{ x: '-100%' }}
+            animate={{ translateX: '-75%' }}
             transition={{
-              duration: 40,  // Adjust duration as needed
+              duration: 30, 
               ease: 'linear',
               repeat: Infinity,
-              repeatType: 'loop',
+              repeatType: "loop",
               delay: index * 2, 
             }}
           >
             {[...testimony, ...testimony].map((testimonial, idx) => (
-              <div key={idx} className="flex-shrink-0 w-[300px]">
-                {index % 2 === 0 ? (
-                  <div 
-                    className={`carousel-item carousel-item-bg-${(idx % 3) + 1} h-[200px] p-3 bg-cover bg-center text-white rounded-lg`}
-                    style={{ backgroundImage: `url(${testimonial.avatar})` }}
-                  >
-                    <div className="flex flex-col justify-between h-full bg-black bg-opacity-30 p-3 rounded-md">
-                      <div className="mt-auto">
-                        <div className="text-lg font-semibold">{testimonial.name}</div>
-                        <div className="text-yellow-500 flex items-center">
-                          {Array.from({ length: testimonial.rating }, (_, i) => (
-                            <MdStarRate key={i} />
-                          ))}
-                        </div>
-                      </div>           
-                    </div>
-                  </div>
-                ) : (
-                  <div className="carousel-item bg-white rounded-lg shadow-md p-3 flex items-center h-[200px] cursor-pointer"  onClick={() => openPopup(testimonial)}>
-                    <div className="flex flex-col w-full h-full">
-                      <p className="text-gray-800 mb-2">{testimonial.shortDescription}</p>
-                      <div className="mt-auto flex items-center justify-between w-[55%]">
-                        <div>
-                          <img src={testimonial.avatar} alt={testimonial.name} className="w-10 h-10 rounded-full" />
-                        </div>
-                        <div className="flex flex-col">
-                          <div className="text-lg font-semibold">{testimonial.name}</div>
-                          <button 
-                            className="text-[#3AA619]"
-                            onClick={() => openPopup(testimonial)}
-                          >
-                            See More
-                          </button>
-                        </div>
+              <div key={idx} className="flex-shrink-0 flex space-x-4 w-[33vw]">
+                {/* Image Card */}
+                <div
+                  className={`carousel-item carousel-item-bg-${(idx % 3) + 1} p-3 bg-cover bg-center text-white rounded-lg`}
+                  style={{ backgroundImage: `url(${testimonial.avatar})` }}
+                >
+                  <div className="flex flex-col justify-between h-full bg-black bg-opacity-30 p-3 rounded-md">
+                    <div className="mt-auto">
+                      <div className="text-lg font-semibold">{testimonial.name}</div>
+                      <div className="text-yellow-500 flex items-center">
+                        {Array.from({ length: testimonial.rating }, (_, i) => (
+                          <MdStarRate key={i} />
+                        ))}
                       </div>
                     </div>
                   </div>
-                )}
+                </div>
+
+                {/* Text Card */}
+                <div
+                  className="carousel-item bg-white rounded-lg shadow-md p-3 flex items-center h-[200px] cursor-pointer"
+                  onClick={() => openPopup(testimonial)}
+                >
+                  <div className="flex flex-col w-full h-full">
+                    <p className="text-gray-800 mb-2">{testimonial.shortDescription}</p>
+                    <div className="mt-auto flex items-center justify-between w-[55%]">
+                      <div>
+                        <img src={testimonial.avatar} alt={testimonial.name} className="w-10 h-10 rounded-full" />
+                      </div>
+                      <div className="flex flex-col">
+                        <div className="text-lg font-semibold">{testimonial.name}</div>
+                        <button
+                          className="text-[#3AA619]"
+                          onClick={() => openPopup(testimonial)}
+                        >
+                          See More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </motion.div>
@@ -84,29 +86,28 @@ const Testimonial = () => {
       </div>
 
       {showPopup && selectedTestimonial && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div className="bg-white p-6 rounded-lg max-w-md w-full max-h-[80vh] overflow-y-auto relative">
-      <button
-        className="absolute top-2 right-2 text-black"
-        onClick={closePopup}
-      >
-        <HiOutlineX />
-      </button>
-      <h3 className="text-xl font-semibold mb-4">{selectedTestimonial.name}</h3>
-      <p className="mb-4">{selectedTestimonial.fullDescription}</p>
-      <div className="flex items-center mb-4">
-        <img src={selectedTestimonial.avatar} alt={selectedTestimonial.name} className="w-16 h-16 rounded-full mr-4" />
-        <div className="text-yellow-500 flex items-center">
-          {Array.from({ length: selectedTestimonial.rating }, (_, i) => (
-            <MdStarRate key={i} />
-          ))}
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg max-w-md w-full max-h-[80vh] overflow-y-auto relative">
+            <button
+              className="absolute top-2 right-2 text-black"
+              onClick={closePopup}
+            >
+              <HiOutlineX />
+            </button>
+            <h3 className="text-xl font-semibold mb-4">{selectedTestimonial.name}</h3>
+            <p className="mb-4">{selectedTestimonial.fullDescription}</p>
+            <div className="flex items-center mb-4">
+              <img src={selectedTestimonial.avatar} alt={selectedTestimonial.name} className="w-16 h-16 rounded-full mr-4" />
+              <div className="text-yellow-500 flex items-center">
+                {Array.from({ length: selectedTestimonial.rating }, (_, i) => (
+                  <MdStarRate key={i} />
+                ))}
+              </div>
+            </div>
+            <YTComponent videoId={selectedTestimonial.videoId} />
+          </div>
         </div>
-      </div>
-      <YTComponent videoId={selectedTestimonial.videoId} />
-    </div>
-  </div>
-)}
-
+      )}
     </div>
   );
 };
