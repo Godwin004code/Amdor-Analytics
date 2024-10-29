@@ -7,7 +7,7 @@ const ContactHero = () => {
             <h2 className='text-[#262626] font-semibold sm:text-4xl text-7xl'>Contact Us</h2>
         </div>
         <div className='w-[50%] sm:w-full'>
-            <p className='font-light text-[#59595A] text-lg sm:text-base sm:mt-3'>Welcome to wdwdawfe, where we offer two comprehensive options to cater to your needs: Free and Pro. We believe in providing s and affordable pricing options for our services. E asafn G looking to enhance your skills or a business seeking professional development solutions, we have a plan that suits you. Explore our pricing options below and choose the one that best fits your requirements.</p>
+            <p className='font-light text-[#59595A] text-lg sm:text-base sm:mt-3'>Welcome to Amdor Analytics! We're here to support you on your journey to tech success. Our mission is to empower individuals with in-demand tech skills, opening doors to global opportunities. Whether you have questions about our programs, need guidance, or just want to connect, feel free to reach out. Our team is excited to help you unlock your potential!            </p>
         </div>
     </div>
   )

@@ -12,7 +12,7 @@ const CourseCurriculum = ({course}) => {
     {outline.map((courses, idx) => {
         const {title, intro, des_one, des_two, des_three, des_four, des_five, des_seven, des_eight,des_nine, des_ten, des_eleven, des_six} = courses
         return (
-            <div className='bg-white rounded-xl course-one-wrapper w-[48%] sm:w-full sm:p-5 p-10' key={title}>
+            <div className='bg-[#e9f5e8] rounded-xl course-one-wrapper w-[48%] sm:w-full sm:p-5 p-10' key={title}>
 <h2 className='text-[#262626] font-bold text-6xl float-right'>0{idx + 1}</h2>
 <h2 className='text-[#333333] font-semibold text-2xl my-10 sm:mt-16'>{intro}</h2>
 <div>
@@ -25,39 +25,39 @@ const CourseCurriculum = ({course}) => {
     
     </div>}
     {des_three != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
-        <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
+        <h2 className='text-[#333333] text-lg font-medium'>{des_three}</h2>
     
     </div>}
     {des_four != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
-        <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
+        <h2 className='text-[#333333] text-lg font-medium'>{des_four}</h2>
         
     </div>}
     {des_five != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
-        <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
+        <h2 className='text-[#333333] text-lg font-medium'>{des_five}</h2>
        
     </div>}
     {des_six != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
-        <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
+        <h2 className='text-[#333333] text-lg font-medium'>{des_six}</h2>
    
     </div>}
     {des_seven != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
-        <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
+        <h2 className='text-[#333333] text-lg font-medium'>{des_seven}</h2>
     
     </div>}
     {des_eight != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
-        <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
+        <h2 className='text-[#333333] text-lg font-medium'>{des_eight}</h2>
       
     </div>}
     {des_nine != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
-        <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
+        <h2 className='text-[#333333] text-lg font-medium'>{des_nine}</h2>
 
     </div>}
     {des_ten != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
-        <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
+        <h2 className='text-[#333333] text-lg font-medium'>{des_ten}</h2>
    
     </div>}
     {des_eleven != "" &&  <div className='course-one p-5 rounded-lg mb-3'>
-        <h2 className='text-[#333333] text-lg font-medium'>{des_two}</h2>
+        <h2 className='text-[#333333] text-lg font-medium'>{des_eleven}</h2>
    
     </div>}
 

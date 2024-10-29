@@ -2,6 +2,7 @@
 import img from "../../assets/2a1b8774ac452db1e2b7551ba9f4f9f2.png";
 
 const posts = [
+
   {
     id: 1,
     title:
@@ -429,6 +430,7 @@ const posts = [
     createdDate: "12 Oct 2024",
     author: "Jane Doe",
   },
+
 ];
 
 export default posts;

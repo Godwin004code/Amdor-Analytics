@@ -52,13 +52,14 @@ const ContactArea = () => {
                     <div className='bg-[#F7F7F8] w-[50px] h-[50px] flex justify-center items-center rounded-full'>
                         <FaEnvelope />
                     </div>
-                    <h2 className='text-[#4C4C4D] font-normal text-lg mt-4'>amdor@gmail.com</h2>
+                    <h2 className='text-[#4C4C4D] font-normal text-lg mt-4'>amdoranalytics@gmail.com</h2>
                 </div>
                 <div className='bg-[#3AA6191A] my-14 sm:my-5 h-[220px] flex flex-col justify-center items-center rounded-lg'>
                     <div className='bg-[#F7F7F8] w-[50px] h-[50px] flex justify-center items-center rounded-full'>
                         <FaPhone />
                     </div>
                     <h2 className='text-[#4C4C4D] font-normal text-lg mt-4'>+2348114087403</h2>
+                    <h2 className='text-[#4C4C4D] font-normal text-lg mt-2'>+2347031359782</h2>
                 </div>
                 <div className='bg-[#3AA6191A] h-[220px] flex flex-col justify-center items-center rounded-lg'>
                     <div className='bg-[#F7F7F8] w-[50px] h-[50px] flex justify-center items-center rounded-full'>
@@ -73,7 +74,7 @@ const ContactArea = () => {
               </div>
              </Link>
                     </div>
-                    <h2 className='text-[#4C4C4D] font-normal text-lg mt-4'>amdor@gmail.com</h2>
+                    <h2 className='text-[#4C4C4D] hidden font-normal text-lg mt-4'>amdor@gmail.com</h2>
                 </div>
             </section>
         </div>
