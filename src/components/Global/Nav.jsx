@@ -16,8 +16,8 @@ const Nav = () => {
     { name: "Contact Us", path: "/contact" },
   ];
 
-  const learnItems = ["link1", "link2", "link3"];
-  const courseItems = ["course1", "course2", "course3"];
+  const learnItems = ["Instruction Led Courses", "Self Paced Courses"];
+  const courseItems = ["Data Analytics", "Business Analysis", "Data Science", "HR Analytics", "Cyber Security", "Data Engineering"];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -47,11 +47,11 @@ const Nav = () => {
             {/* Learn Dropdown */}
             <motion.li className="relative group" initial="hidden" animate="visible">
               <Link className="text-base font-medium text-black hover:text-[#3AA619]">Learn</Link>
-              <div className="absolute hidden group-hover:flex flex-col w-[50vh] p-1 shadow-lg bg-opacity-25 bg-white rounded-lg">
+              <div className="absolute mt-0 hidden group-hover:flex flex-col w-[250px] p-1 shadow-lg bg-opacity-25 bg-white rounded-lg">
                 {learnItems.map((item, index) => (
                   <Link
                     key={index}
-                    className="block w-[50vh] text-center py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white"
+                    className="block w-full text-left text-lg py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white"
                     to="/learn"
                   >
                     {item}
@@ -61,14 +61,14 @@ const Nav = () => {
             </motion.li>
 
             {/* Courses Dropdown */}
-            <motion.li className="relative group" initial="hidden" animate="visible">
-              <Link className="text-base font-medium text-black hover:text-[#3AA619]">Courses</Link>
-              <div className="absolute hidden group-hover:flex flex-col w-[50vh] p-1 shadow-lg bg-opacity-25 bg-white rounded-lg">
+            <motion.li className="relative group " initial="hidden" animate="visible">
+              <Link className="text-base font-medium text-black  hover:text-[#3AA619]" to="/courses">Courses</Link>
+              <div className="absolute hidden z-20 bg-white group-hover:flex flex-col w-[50vh] p-1 shadow-lg   rounded-lg">
                 {courseItems.map((item, index) => (
                   <Link
                     key={index}
-                    className="block w-[50vh] text-center py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white"
-                    to="/courses"
+                    className="block w-[50vh] text-left text-lg py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white"
+                    to={item}
                   >
                     {item}
                   </Link>

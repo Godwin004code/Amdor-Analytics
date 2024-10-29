@@ -1,6 +1,6 @@
 import React from 'react'
 import { MdOutlineElectricBolt } from "react-icons/md";
-import heroImg from "../../assets/Frame 1000005840-2.png"
+import heroImg from "../../assets/homepage.jpg_1729377860009.jpg"
 import AbstractLine from "../../assets/Abstract Line.png"
 import { Link } from 'react-router-dom';
 
@@ -38,8 +38,8 @@ const Hero = () => {
                     <button className='h-[60px] bg-[#fff] px-5 rounded-lg text-[#262626]'>Get Started</button></Link>
                 </div>
             </div>
-            <div className='sm:hidden'>
-                <img src={heroImg} alt='Hero Image' />
+            <div className='sm:hidden w-[45%]'>
+                <img src={heroImg} className='w-full' alt='Hero Image' />
             </div>
         </section>
     )
