@@ -72,7 +72,7 @@ const Footer = () => {
                 <FaFacebook size={24} />
               </div>
              </Link>
-             <Link to="https://www.instagram.com/amdor_analytics">
+             <Link to="https://www.instagram.com/amdoranalytics/">
              <div className='bg-[#F7F7F8] w-[52px] sm:h-[40px] sm:w-[40px] rounded-lg flex justify-center items-center h-[52px]' style={{ border: '1px solid #F1F1F3' }}>
                 <FaInstagram size={24} />
               </div>
