@@ -59,7 +59,7 @@ const ExploreCourses = () => {
                 {
                   Array(rating).fill(0).map((item, idx) => {
                     return (
-                      <MdStarRate />
+                      <MdStarRate color='#3AA619' />
                     )
                   })
                 }

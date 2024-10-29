@@ -110,13 +110,28 @@ const courses = [
       },
       courseReviews: [
         {
-          studentName: "Godwin Imoleayo",
-          studentReview: "This course is a very good course",
+          studentName: "Doyinsola",
+          studentReview: "The Amdor Analytics program was a game-changer for me! I started with zero experience, and now I’m confidently working with data and dashboards. The support from the team is unmatched!",
           studentRating: 5
         },
         {
-          studentName: "Gift Imoleayo",
-          studentReview: "I enjoyed this good course",
+          studentName: "Abiodun",
+          studentReview: "This program transformed my career! The hands-on projects and real-world examples made learning so easy. I highly recommend it to anyone looking to break into tech. ",
+          studentRating: 5
+        },
+        {
+          studentName: "Adejuwon",
+          studentReview: "Amdor Analytics provided me with everything I needed – from technical skills to job placement support. I landed my first data role within weeks of finishing! ",
+          studentRating: 5
+        },
+        {
+          studentName: "Emmanuel",
+          studentReview: "I loved the instructor-led sessions. The concepts were explained clearly, and I felt guided every step of the way. I'm now working on data projects I never thought possible!",
+          studentRating: 5
+        },
+        {
+          studentName: "Bolaji",
+          studentReview: "Taking this course was the best decision. The practical skills I gained are directly applicable to my job, and the career support was invaluable. Thank you, Amdor Analytics! ",
           studentRating: 5
         },
       ]
@@ -213,15 +228,20 @@ const courses = [
       },
       courseReviews: [
         {
-          studentName: "Godwin Imoleayo",
-          studentReview: "This course is a very good course",
+          studentName: "Miracle JC",
+          studentReview: "Amdor Analytics' Business Analysis program was exactly what I needed to boost my career. The hands-on exercises and real-life case studies gave me the skills to make data-driven decisions confidently! ",
           studentRating: 5
         },
         {
-          studentName: "Gift Imoleayo",
-          studentReview: "I enjoyed this good course",
+          studentName: "Christian",
+          studentReview: "The course was incredibly practical and engaging. I learned how to use tools like Excel and SQL for analysis and gained insights into industry-standard methodologies. I feel well-prepared to take on complex business challenges!",
           studentRating: 5
         },
+        {
+          studentName: "Chioma",
+          studentReview: "This program was a fantastic learning experience! The instructors broke down each concept, making it easy to understand even the most complex topics. I'm now applying these skills in my role and seeing real results! ",
+          studentRating: 5
+        }
       ]
     },
 
@@ -361,11 +381,12 @@ const courses = [
         {
             name: "Chukwuka Chinyere",
   description: "Chinyere is a seasoned tech professional with over 7 years of experience in data analytics and data science. As the founder of Amdor Analytics, she has successfully guided individuals with no prior technology skills to smoothly transition into tech and secure their first roles Renowned for her straightforward and effective teaching methods. Chinyere has personally trained over 5,000 participants. Her expertise spans across the telecommunications, Governance, financial, and edtech sectors." ,
-  img: inst2
+  img: inst5
         },
         {
             name: "Yakubu",
-  description: "Seasoned data professional with about 5 years of experience in data analysis, data visualization, data science. Currently working with one of the leading Fintech Banks in Nigeria Renmoney. Expertise in Python, SQL, Excel and Tableau with a strong background in analyzing complex datasets, identifying trends, creating actionable insights and development of models. His expertise spans across telecommunications, finance, and technology.	" 
+  description: "Seasoned data professional with about 5 years of experience in data analysis, data visualization, data science. Currently working with one of the leading Fintech Banks in Nigeria Renmoney. Expertise in Python, SQL, Excel and Tableau with a strong background in analyzing complex datasets, identifying trends, creating actionable insights and development of models. His expertise spans across telecommunications, finance, and technology.	" ,
+  img: inst2
         }
       ],
       coursesBenefits: {
@@ -381,13 +402,18 @@ const courses = [
       },
       courseReviews: [
         {
-          studentName: "Godwin Imoleayo",
-          studentReview: "This course is a very good course",
+          studentName: "Christopher",
+          studentReview: "The Amdor Analytics Data Science program exceeded my expectations! The curriculum was well-structured, and I gained hands-on experience with tools like Python and SQL. I feel ready to tackle real-world data challenges!  ",
           studentRating: 5
         },
         {
-          studentName: "Gift Imoleayo",
-          studentReview: "I enjoyed this good course",
+          studentName: "Peace",
+          studentReview: "I went from a complete beginner to building machine learning models in just a few months. The mentors were incredibly supportive, and the projects helped me build a strong portfolio. Highly recommend!  ",
+          studentRating: 5
+        },
+        {
+          studentName: "Chukwudi",
+          studentReview: "This program was a fantastic investment in my career! The lessons were thorough and practical, and I got personalized feedback that helped me improve quickly. I’m now confident applying data science in my job!        ",
           studentRating: 5
         },
       ]
@@ -484,13 +510,18 @@ const courses = [
       },
       courseReviews: [
         {
-          studentName: "Godwin Imoleayo",
-          studentReview: "This course is a very good course",
+          studentName: "Chinasa Fabian-Ijeruh",
+          studentReview: "The HR Analytics program at Amdor Analytics opened my eyes to data’s power in HR! I now have the skills to analyze employee data, predict trends, and make informed decisions for our team. Highly recommended! ",
           studentRating: 5
         },
         {
-          studentName: "Gift Imoleayo",
-          studentReview: "I enjoyed this good course",
+          studentName: "Oluseyi Ekundayo",
+          studentReview: "This course was exactly what I needed to advance my HR career. Learning how to use data to track employee performance and retention has transformed how I approach my role. Thank you, Amdor Analytics! ",
+          studentRating: 5
+        },
+        {
+          studentName: "Timi Mac-Barango",
+          studentReview: "The HR Analytics program was insightful and practical. The instructors explained each tool clearly, and I now feel confident using data to solve HR challenges. My organization is already benefiting from what I learned! ",
           studentRating: 5
         },
       ]
@@ -646,15 +677,20 @@ const courses = [
       },
       courseReviews: [
         {
-          studentName: "Godwin Imoleayo",
-          studentReview: "This course is a very good course",
+          studentName: "Obiora",
+          studentReview: "Amdor Analytics' Cyber Security program gave me the skills and confidence I needed to enter this high-demand field. The hands-on labs and real-world scenarios were invaluable. I now feel prepared to protect digital systems effectively!",
           studentRating: 5
         },
         {
-          studentName: "Gift Imoleayo",
-          studentReview: "I enjoyed this good course",
+          studentName: "Deborah",
+          studentReview: "This course was fantastic! The instructors broke down complex concepts like network security and threat analysis, making them easy to understand. I now have a solid foundation in cybersecurity and am excited to advance in this field.",
           studentRating: 5
         },
+        {
+          studentName: "Bright",
+          studentReview: "The Cyber Security program was a game-changer for my career. I gained practical skills in identifying vulnerabilities and implementing security measures. Highly recommend this program to anyone looking to secure their future in tech! ",
+          studentRating: 5
+        }
       ]
     },
     {
@@ -822,13 +858,18 @@ const courses = [
       },
       courseReviews: [
         {
-          studentName: "Godwin Imoleayo",
-          studentReview: "This course is a very good course",
+          studentName: "Ayodeji",
+          studentReview: "The Data Engineering program at Amdor Analytics was exceptional! The hands-on approach taught me to build data pipelines confidently",
           studentRating: 5
         },
         {
-          studentName: "Gift Imoleayo",
-          studentReview: "I enjoyed this good course",
+          studentName: "Femi",
+          studentReview: "This course was fantastic! I learned to use SQL and Spark effectively, and I’m already applying my skills at work. Highly recommend!",
+          studentRating: 5
+        },
+        {
+          studentName: "Awele Augustina",
+          studentReview: "A great balance of theory and practice! The real-world projects helped me build a solid portfolio, preparing me for complex data engineering tasks",
           studentRating: 5
         },
       ]

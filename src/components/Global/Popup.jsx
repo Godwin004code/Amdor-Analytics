@@ -3,6 +3,14 @@ import { HiOutlineXMark } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
 
 function Popup({ showPopup, setShowPopup }) {
+
+ 
+    const handleSubmit = (e) => {
+      e.preventDefault(); // Prevents the default form submission behavior
+      const url = ""; // The link you want to open
+      window.open(url, "_blank"); // Opens in a new tab, use "_self" for the same tab
+    }
+  
   return (
     <>
       {showPopup && (
@@ -20,13 +28,14 @@ function Popup({ showPopup, setShowPopup }) {
               Start your journey today and see the difference!
             </h2>
             <p className='text-center mt-5 mb-5'>Enter your email address to get access</p>
-            <div>
+            <form onSubmit={handleSubmit}>
               <input
                 type="email"
                 className='block w-full pl-3 py-3 rounded-lg border border-[#F1F1F3]'
                 name="email"
                 placeholder='Enter email address'
                 id="email"
+                required
               />
               <input
                 type="number"
@@ -34,13 +43,15 @@ function Popup({ showPopup, setShowPopup }) {
                 placeholder='Enter Phone Number'
                 name="num"
                 id="num"
+
+                required
               />
-            </div>
-            <Link target='blank' to="https://chat.whatsapp.com/Glef2h4zDdH89ToZqYOeRZ">
-              <button className='h-[55px] mt-10 w-full rounded-lg text-white bg-[#3AA619] hover:bg-[#339f16] transition duration-200'>
+            </form>
+            
+              <button type='submit' className='h-[55px] mt-10 w-full rounded-lg text-white bg-[#3AA619] hover:bg-[#339f16] transition duration-200'>
                 Join Community
               </button>
-            </Link>
+            
           </div>
         </div>
       )}

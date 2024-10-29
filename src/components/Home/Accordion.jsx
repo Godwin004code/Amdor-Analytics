@@ -38,7 +38,7 @@ const accordionData = [
     },
     {
         title: "Who should I contact if I have questions about a course?",
-        description: "You can reach out to us at amdoranalytics@gmail.com or +2348114037403 ",
+        description: "You can reach out to us at amdoranalytics@gmail.com or +2348114037403, +2347031359782 ",
         li1: "",
         li2: "",
         li3: "",
