@@ -41,7 +41,7 @@ const ExploreCourses = () => {
             const { title, description, price, level, duration, banner, rating } = item;
             return (
               <div
-                className="relative transition-all duration-200 ease-in-out w-[32%] sm:w-full rounded-xl p-8 sm:p-4 flex-grow max-w-xs"
+                className="relative transition-all duration-200 ease-in-out w-[32%] sm:w-full sm:mx-auto rounded-xl p-8 sm:p-4 flex-grow max-w-xs"
                 key={idx}
                 onMouseEnter={() => setShowDes(idx)}
                 onMouseLeave={() => setShowDes(null)}
