@@ -170,7 +170,7 @@ const Benefit = () => {
         {Benefits.map((item, idx) => {
           const {title, description, li1, li2,li3,icon} = item
           return (
-            <div className='bg-[#3AA619] mb-8 w-[32%] sm:w-full rounded-xl p-8' key={idx}>
+            <div className='flex flex-col bg-[#3AA619] mb-8 w-[40vw] sm:w-[90%] mx-auto rounded-xl p-8' key={idx}>
              <div className='flex justify-between'>
       <h2 dangerouslySetInnerHTML={{ __html: icon }} />
              <h2 className='font-bold text-[#fff] ml-auto w-fit text-7xl'>0{idx+1}</h2>
@@ -183,7 +183,7 @@ const Benefit = () => {
                 {li2 &&  <li className='text-[#fff] font-normal mt-3 text-lg'>{li2}</li>}
                 {li3 &&  <li className='text-[#fff] font-normal mt-3 text-lg'>{li3}</li>}
               </ul>
-              <div className='w-[50px] ml-auto mt-5 h-[50px] rounded-lg bg-[#FCFCFD] flex justify-center items-center'>
+              <div className='w-[50px] mt-auto ml-auto h-[50px] rounded-lg bg-[#FCFCFD] flex justify-center items-center'>
               <MdArrowOutward color='#FFC480' size={23} />
               </div>
             </div>

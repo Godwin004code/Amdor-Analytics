@@ -38,10 +38,10 @@ const Testimonial = () => {
             }}
           >
             {[...testimony, ...testimony].map((testimonial, idx) => (
-              <div key={idx} className="flex-shrink-0 flex space-x-4 w-[33vw]">
+              <div key={idx} className="flex-shrink-0 flex space-x-4 w-[35vw] xl:w-[55vw] lg:w-[50vw] md:w-[70vw] sm:w-[90vw]">
                 {/* Image Card */}
                 <div
-                  className={`carousel-item carousel-item-bg-${(idx % 3) + 1} p-3 bg-cover bg-center text-white rounded-lg`}
+                  className={`carousel-item carousel-item-bg-${(idx % 3) + 1} p-3 h-[200px] bg-cover bg-center text-white rounded-lg`}
                   style={{ backgroundImage: `url(${testimonial.avatar})` }}
                 >
                   <div className="flex flex-col justify-between h-full bg-black bg-opacity-30 p-3 rounded-md">
@@ -58,17 +58,17 @@ const Testimonial = () => {
 
                 {/* Text Card */}
                 <div
-                  className="carousel-item bg-white rounded-lg shadow-md p-3 flex items-center h-[200px] cursor-pointer"
+                  className="carousel-item bg-white rounded-lg shadow-md p-3 flex items-center h-[200px] cursor-pointer overflow-hidden"
                   onClick={() => openPopup(testimonial)}
                 >
                   <div className="flex flex-col w-full h-full">
-                    <p className="text-gray-800 mb-2">{testimonial.shortDescription}</p>
-                    <div className="mt-auto flex items-center justify-between w-[55%]">
+                    <p className="text-gray-800 mb-2 break-words">{testimonial.shortDescription}</p>
+                    <div className="mt-auto flex items-center justify-between w-full">
                       <div>
                         <img src={testimonial.avatar} alt={testimonial.name} className="w-10 h-10 rounded-full" />
                       </div>
                       <div className="flex flex-col">
-                        <div className="text-lg font-semibold">{testimonial.name}</div>
+                        <div className="text-lg font-semibold text-center">{testimonial.name}</div>
                         <button
                           className="text-[#3AA619]"
                           onClick={() => openPopup(testimonial)}
