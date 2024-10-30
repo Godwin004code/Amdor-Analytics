@@ -14,13 +14,13 @@ const Footer = () => {
           <Link to="/">
             <img className='w-[150px] h-[130px] object-cover' src={logo} alt="Amdor Analytics" />
           </Link>
-          <p className='text-white'>
+          <p className='text-white mt-4'>
             At Amdor Analytics, we are dedicated to empowering individuals to become global talents through comprehensive and accessible training. Our mission is to bridge the skills gap and enable learners to acquire in-demand skills, empowering them to make informed decisions, drive innovation, and create positive change in a tech-driven world.
           </p>
         </div>
 
         {/* Quick Links */}
-        <div>
+        <div className='px-4'>
           <h3 className='text-white font-semibold mb-4'>Quick Links</h3>
           <nav>
             <ul className='flex flex-col gap-2'>
@@ -33,37 +33,37 @@ const Footer = () => {
         </div>
 
         {/* Social Profiles, Contact Info */}
-        <div>
-          <h3 className='text-white font-semibold mb-4'>Social Profiles</h3>
+        <div className='space-y-4'>
+          <h3 className='text-white font-semibold mb-4 justify-between'>Social Profiles</h3>
           <nav>
-            <ul className='flex gap-4 flex-wrap justify-between'>
+            <ul className='flex gap-3 flex-wrap'>
               <Link to="https://www.facebook.com/amdoranalytics">
-                <div className='bg-[#F7F7F8] w-12 h-12 sm:w-10 sm:h-10 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
+                <div className='bg-[#F7F7F8] w-12 h-12 sm:w-12 sm:h-12 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
                   <FaFacebook size={24} />
                 </div>
               </Link>
               <Link to="https://www.instagram.com/amdoranalytics/">
-                <div className='bg-[#F7F7F8] w-12 h-12 sm:w-10 sm:h-10 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
+                <div className='bg-[#F7F7F8] w-12 h-12 sm:w-12 sm:h-12 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
                   <FaInstagram size={24} />
                 </div>
               </Link>
               <Link to="https://x.com/AmdorAnalytics">
-                <div className='bg-[#F7F7F8] w-12 h-12 sm:w-10 sm:h-10 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
+                <div className='bg-[#F7F7F8] w-12 h-12 sm:w-12 sm:h-12 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
                   <FaXTwitter size={24} />
                 </div>
               </Link>
               <Link to="https://tiktok.com/@amdoranalytics">
-                <div className='bg-[#F7F7F8] w-12 h-12 sm:w-10 sm:h-10 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
+                <div className='bg-[#F7F7F8] w-12 h-12 sm:w-12 sm:h-12 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
                   <FaTiktok size={24} />
                 </div>
               </Link>
               <Link to="https://www.youtube.com/@amdoranalytics?sub_confirmation=1">
-                <div className='bg-[#F7F7F8] w-12 h-12 sm:w-10 sm:h-10 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
+                <div className='bg-[#F7F7F8] w-12 h-12 sm:w-12 sm:h-12 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
                   <FaYoutube size={24} />
                 </div>
               </Link>
               <Link to="https://www.linkedin.com/company/amdor-analytics/">
-                <div className='bg-[#F7F7F8] w-12 h-12 sm:w-10 sm:h-10 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
+                <div className='bg-[#F7F7F8] w-12 h-12 sm:w-12 sm:h-12 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
                   <FaLinkedin size={24} />
                 </div>
               </Link>
