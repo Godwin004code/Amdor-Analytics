@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const ExploreCourses = () => {
   const [showDes, setShowDes] = useState(null);
-
   const path = window.location.pathname;
 
   return (
@@ -32,16 +31,13 @@ const ExploreCourses = () => {
         )}
       </div>
 
-      <div
-        className="flex bg-white justify-between flex-wrap mt-10 gap-6"
-        style={{ display: 'flex' }}
-      >
+      <div className="grid gap-6 mt-10 grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 bg-white">
         {(path === '/courses' ? courses : courses.slice(0, 3)).map(
           (item, idx) => {
             const { title, description, price, level, duration, banner, rating } = item;
             return (
               <div
-                className="relative transition-all duration-200 ease-in-out w-[32%] sm:w-full sm:mx-auto rounded-xl p-8 sm:p-4 flex-grow max-w-xs"
+                className="relative transition-all duration-200 ease-in-out w-full sm:w-auto rounded-xl p-8 flex-grow"
                 key={idx}
                 onMouseEnter={() => setShowDes(idx)}
                 onMouseLeave={() => setShowDes(null)}
@@ -65,9 +61,7 @@ const ExploreCourses = () => {
                 />
                 <div className="flex mt-7 justify-between">
                   <div className="flex gap-5">
-                    <div
-                      className="w-fit p-2 rounded-lg text-sm border border-gray-200"
-                    >
+                    <div className="w-fit p-2 rounded-lg text-sm border border-gray-200">
                       {duration}
                     </div>
                   </div>

@@ -1,24 +1,25 @@
-import React from 'react'
-import logo from "../../assets/WHITEEE.jpg"
-import { Link } from 'react-router-dom'
-
-import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
+import React from 'react';
+import logo from "../../assets/WHITEEE.jpg";
+import { Link } from 'react-router-dom';
+import { FaFacebook, FaInstagram, FaTiktok, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className='bg-[#3AA619] py-7 mt-16'>
-      <section className='w-[90%] mx-auto grid grid-cols-4 lg:grid-cols-2 sm:grid-cols-1 gap-8'>
+      <section className='w-[90%] mx-auto grid grid-cols-3 sm:grid-cols-1 gap-8'>
+        
+        {/* Logo and Description */}
         <div>
           <Link to="/">
             <img className='w-[150px] h-[130px] object-cover' src={logo} alt="Amdor Analytics" />
           </Link>
-          <p className='text-white mt-4'>
+          <p className='text-white'>
             At Amdor Analytics, we are dedicated to empowering individuals to become global talents through comprehensive and accessible training. Our mission is to bridge the skills gap and enable learners to acquire in-demand skills, empowering them to make informed decisions, drive innovation, and create positive change in a tech-driven world.
           </p>
         </div>
 
+        {/* Quick Links */}
         <div>
           <h3 className='text-white font-semibold mb-4'>Quick Links</h3>
           <nav>
@@ -31,10 +32,11 @@ const Footer = () => {
           </nav>
         </div>
 
+        {/* Social Profiles, Contact Info */}
         <div>
           <h3 className='text-white font-semibold mb-4'>Social Profiles</h3>
           <nav>
-            <ul className='flex gap-4 flex-wrap'>
+            <ul className='flex gap-4 flex-wrap justify-between'>
               <Link to="https://www.facebook.com/amdoranalytics">
                 <div className='bg-[#F7F7F8] w-12 h-12 sm:w-10 sm:h-10 rounded-lg flex justify-center items-center' style={{ border: '1px solid #F1F1F3' }}>
                   <FaFacebook size={24} />
@@ -72,15 +74,16 @@ const Footer = () => {
             <p className='mt-2'>Email: amdoranalytics@gmail.com</p>
           </div>
         </div>
-        
-        <div className='text-center lg:text-left'>
-          <h3 className='text-white text-sm font-normal mt-0 sm:mt-6'>
-            © 2024 Amdor Analytics. All rights reserved.
-          </h3>
-        </div>
       </section>
+
+      {/* Horizontal Line and Copyright */}
+      <div className='w-[90%] mx-auto mt-8 border-t border-white pt-4 text-center'>
+        <p className='text-white text-sm font-normal'>
+          © 2024 Amdor Analytics. All rights reserved.
+        </p>
+      </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

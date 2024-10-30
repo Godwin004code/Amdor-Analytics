@@ -161,36 +161,41 @@ const Benefit = () => {
   ]
   return (
     <div className='w-[90%] mx-auto mt-28'>
-      <h2 className='text-[#3AA619] font-semibold text-3xl'>Explore Our Offerings</h2>
-      <div className='flex justify-between sm:hidden mt-6 hidden'>
-        <p className='w-[70%] font-normal text-[#59595A]'>Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.</p>
-        <button className='h-[60px] bg-[#fff] px-5 rounded-lg text-[#262626]'>View All</button>
-      </div>
-      <div className='flex justify-between flex-wrap mt-10'>
-        {Benefits.map((item, idx) => {
-          const {title, description, li1, li2,li3,icon} = item
-          return (
-            <div className='flex flex-col bg-[#3AA619] mb-8 w-[40vw] sm:w-[90%] mx-auto rounded-xl p-8' key={idx}>
-             <div className='flex justify-between'>
-      <h2 dangerouslySetInnerHTML={{ __html: icon }} />
-             <h2 className='font-bold text-[#fff] ml-auto w-fit text-7xl'>0{idx+1}</h2>
-             </div>
-              <h2 className='text-[#fff] font-semibold text-2xl mt-6'>{title}</h2>
-          
-              <ul className='list-disc ml-4'>
-               {description && <li className='text-[#fff] font-normal mt-3 text-lg'>{description}</li>}
-                {li1 && <li className='text-[#fff] font-normal mt-3 text-lg'>{li1}</li>}
-                {li2 &&  <li className='text-[#fff] font-normal mt-3 text-lg'>{li2}</li>}
-                {li3 &&  <li className='text-[#fff] font-normal mt-3 text-lg'>{li3}</li>}
-              </ul>
-              <div className='w-[50px] mt-auto ml-auto h-[50px] rounded-lg bg-[#FCFCFD] flex justify-center items-center'>
-              <MdArrowOutward color='#FFC480' size={23} />
-              </div>
-            </div>
-          )
-        })}
-      </div>
+    <h2 className='text-[#3AA619] font-semibold text-3xl'>Explore Our Offerings</h2>
+    
+    <div className='justify-between sm:hidden mt-6 hidden'>
+      <p className='w-[70%] font-normal text-[#59595A]'>
+        Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.
+      </p>
+      <button className='h-[60px] bg-[#fff] px-5 rounded-lg text-[#262626]'>View All</button>
     </div>
+  
+    <div className='grid gap-6 mt-10 grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
+      {Benefits.map((item, idx) => {
+        const { title, description, li1, li2, li3, icon } = item;
+        return (
+          <div className='flex flex-col bg-[#3AA619] mb-8 rounded-xl p-8' key={idx}>
+            <div className='flex justify-between'>
+              <h2 dangerouslySetInnerHTML={{ __html: icon }} />
+              <h2 className='font-bold text-[#fff] ml-auto w-fit text-7xl'>0{idx + 1}</h2>
+            </div>
+            <h2 className='text-[#fff] font-semibold text-2xl mt-6'>{title}</h2>
+  
+            <ul className='list-disc ml-4'>
+              {description && <li className='text-[#fff] font-normal mt-3 text-lg'>{description}</li>}
+              {li1 && <li className='text-[#fff] font-normal mt-3 text-lg'>{li1}</li>}
+              {li2 && <li className='text-[#fff] font-normal mt-3 text-lg'>{li2}</li>}
+              {li3 && <li className='text-[#fff] font-normal mt-3 text-lg'>{li3}</li>}
+            </ul>
+  
+            <div className='w-[50px] mt-auto ml-auto h-[50px] rounded-lg bg-[#FCFCFD] flex justify-center items-center'>
+              <MdArrowOutward color='#FFC480' size={23} />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
   )
 }
 
