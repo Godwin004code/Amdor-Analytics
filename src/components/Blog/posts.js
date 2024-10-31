@@ -1,5 +1,14 @@
 // posts.js
-import img from "../../assets/2a1b8774ac452db1e2b7551ba9f4f9f2.png";
+import img1 from "../../assets/HOW TO GET STAETED AS A DATA ENGINNER BLOG.jpeg";
+import img2 from "../../assets/5 IN-DEMAND SKILLS BLOG.jpeg"
+import img3 from "../../assets/CYBER SECURITY AND AI BLOG.jpeg"
+import img4 from "../../assets/DATA INTEGRATION BLOG.jpeg"
+import img5 from "../../assets/DATABASE AND DATA WAREHOUSE BLOG.jpeg"
+import img6 from "../../assets/DFFERENCE BETWEEN DA & DS BLOG.webp"
+import img7 from "../../assets/EVERYTHING THAT YOU NEED TO KNOW TO LAND YOUR GIG ON UPWORK.jpeg"
+import img8 from "../../assets/MACHINE LEARNING BLOG.jpeg"
+import img9 from "../../assets/DATA ACCURACY BLOG.jpeg"
+import img10 from "../../assets/HOW TO GET STAETED AS A DATA ENGINNER BLOG.jpeg"
 
 const posts = [
   {
@@ -58,11 +67,11 @@ const posts = [
           "You don’t have to go through this journey alone! Join a community of fellow learners or sign up for online courses. Amdor Analytics, for example, offers amazing resources to help you transition into the tech world as a data analyst, even if you’re starting with no prior knowledge.",
       },
     ],
-    img,
+    img:img10,
     snapshot:
       "A beginner’s guide to becoming a data analyst even with no tech background.",
     createdDate: "12 Oct 2024",
-    author: "Jane Doe",
+    author: "Chukwuka Chinyere",
   },
   {
     id: 2,
@@ -96,11 +105,11 @@ const posts = [
           "So, in simple terms, Machine Learning is like giving a student the tools to solve problems with a little guidance, while Deep Learning is letting a genius brain work it all out on its own – but at the cost of needing lots of data and more brainpower.\n Next time you hear these terms, you’ll know exactly what they mean! Both are incredibly powerful tools transforming the world, and it’s fascinating to see them in action every day.\n Got more questions on tech? Drop them in the comments!  Let’s learn together!",
       },
     ],
-    img,
+    img:img8,
     snapshot:
       "Ever wondered what the difference between Deep Learning and Machine Learning is?",
     createdDate: "12 Oct 2024",
-    author: "Jane Doe",
+    author: "Chukwuka Chinyere",
   },
   {
     id: 3,
@@ -128,11 +137,11 @@ const posts = [
           "Purpose: Databases handle real-time operations; data warehouses are for in-depth analysis.\nData Structure: Databases are normalized (optimized for writing); data warehouses are denormalized (optimized for reading).\nUse Case: Use a database for day-to-day operations and a data warehouse for strategic analysis.\nUnderstanding these differences ensures you're using the right tool for the job!  If you’re looking to boost your data management and analytics game, learning when and how to leverage databases versus data warehouses is a game-changer.",
       },
     ],
-    img,
+    img:img5,
     snapshot:
       "How to understand the foundational tools we work with daily as data professionals",
     createdDate: "12 Oct 2024",
-    author: "Jane Doe",
+    author: "Chukwuka Chinyere",
   },
   {
     id: 4,
@@ -165,11 +174,12 @@ const posts = [
           "Integration opens possibilities for more accurate forecasting. By pulling in data from various sources, you can identify patterns and predict outcomes more effectively, helping your team make decisions that are based on solid predictions rather than guesswork.\n In today’s digital age, data integration isn’t just a luxury—it’s a necessity. It enables businesses to transform raw data into meaningful insights that fuel informed and strategic decision-making.\n Ready to see how data integration can transform your decision-making process? Let’s talk about how you can harness the power of your data to drive results!",
       },
     ],
-    img,
+    img:img4,
+
     snapshot:
       "The Secret sauce to why top companies are making faster, smarter decisions these days",
     createdDate: "12 Oct 2024",
-    author: "Jane Doe",
+    author: "Chukwuka Chinyere",
   },
   {
     id: 5,
@@ -221,11 +231,11 @@ const posts = [
           "Becoming a data engineer is a marathon, not a sprint. Stay consistent with your learning, take it step by step, and don’t be afraid to ask questions. Tech is a constantly evolving field, and part of being successful is being open to continuous learning.\n Remember, everyone starts somewhere! With dedication and the right resources, you can absolutely become a data engineer, even if you’re starting from scratch.",
       },
     ],
-    img,
+    img:img1,
     snapshot:
       "Step-by-step guide to becoming a successful data engineer without prior tech experience",
     createdDate: "12 Oct 2024",
-    author: "Jane Doe",
+    author: "Chukwuka Chinyere",
   },
   {
     id: 6,
@@ -271,11 +281,11 @@ const posts = [
           "Landing your first gig might take some time. Don’t get discouraged! Keep refining your profile, tweaking your proposals, and showing up every day. Before you know it, you’ll have your first client and many more to follow!\n Want to learn even more tips & tricks for optimizing your Upwork profile? Join Amdor Analytics Community, where I’ll be spilling all the secrets to getting hired faster on Upwork! Let’s take your freelancing career to the next level.",
       },
     ],
-    img,
+    img:img7,
     snapshot:
       "Step-by-step guide to breaking into the world of freelancing and landing gigs on Upwork",
     createdDate: "12 Oct 2024",
-    author: "Jane Doe",
+    author: "Chukwuka Chinyere",
   },
   {
     id: 7,
@@ -321,10 +331,10 @@ const posts = [
           "AI is the game-changer that cybersecurity professionals have been waiting for. It helps us stay ahead of the curve, reduce human error, and make smarter, faster decisions. If you’re in the cybersecurity space, now is the time to start leveraging AI for stronger, smarter defense mechanisms.\n Want to know more? Drop your questions in the comments below! Let’s keep the conversation going and secure the digital world together.",
       },
     ],
-    img,
+    img:img3,
     snapshot: "How can AI help in protecting our sensitive data?",
     createdDate: "12 Oct 2024",
-    author: "Jane Doe",
+    author: "Chukwuka Chinyere",
   },
   {
     id: 8,
@@ -381,10 +391,10 @@ const posts = [
           "Data accuracy is not just a technical skill—it’s a mindset! By defining standards, cleaning and validating data, and working collaboratively, you can ensure that your projects are built on a foundation of trusted, reliable data. With accurate data, you’ll make smarter decisions, deliver more impactful results, and build trust with your stakeholders.\n So, ready to tackle your next project with confidence in your data? Let’s make data accuracy a priority in every project, every time!",
       },
     ],
-    img,
+    img:img9,
     snapshot: "How to avoid inaccurate data in your projects",
     createdDate: "12 Oct 2024",
-    author: "Jane Doe",
+    author: "Chukwuka Chinyere",
   },
   {
     id: 9,
@@ -423,11 +433,11 @@ const posts = [
           "As technology advances, so do cyber threats. Businesses are constantly searching for cyber security experts who can protect sensitive data and keep their systems safe. This skill is essential in a world where data breaches and hacks are becoming increasingly common.\nWant to get started? At Amdor Analytics, we’ve got you covered! Whether you're a beginner or a professional, our programs in Data Analytics, Data Science, Business Analysis, Data Engineering, and Cyber Security are designed to help you master these in-demand skills and secure that dream job.\nDon’t wait until tomorrow. Register now and start your journey with Amdor Analytics today! Your future is just one step away!",
       },
     ],
-    img,
+    img:img2,
     snapshot:
       "Top 5 in-demand skills that can open the doors to a rewarding and high-paying career this year!",
     createdDate: "12 Oct 2024",
-    author: "Jane Doe",
+    author: "Chukwuka Chinyere",
   },
 ];
 
