@@ -7,6 +7,16 @@ const CourseCurriculum = ({course}) => {
     
   return (
     <div className='w-[90%] mx-auto mt-52 sm:mt-20'>
+         <div className="w-full h-full">
+      <iframe
+        width="100%"
+        height="500px"
+        src={`https://www.youtube.com/embed/${course.videoID}?rel=0&modestbranding=1&controls=1`}
+        title="YouTube video player"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
         <h2 className='text-[#3AA619] font-bold text-4xl my-10'>Curriculum</h2>
 <section className='flex w-full justify-between flex-wrap gap-10'>
     {outline.map((courses, idx) => {

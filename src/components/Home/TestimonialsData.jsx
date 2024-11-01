@@ -4,6 +4,9 @@ import img2 from "../../assets/WhatsApp Image 2024-10-29 at 12.49.01.jpeg";
 import img3 from "../../assets/xc.jpeg";
 
 export const testimony = [
+  
+
+  
     {
       name: "Seyi",
       shortDescription: "Amdor Analytics significantly enhanced my data analytics skills in data analytics, I turned to AMDOR ANALYTICS...",

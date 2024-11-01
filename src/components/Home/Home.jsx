@@ -50,10 +50,11 @@ const Home = () => {
     <StudentWork />
     <Benefit />
     <ExploreCourses />
+    <ImageCarousel />
     <Testimonial />
     <Pricing />
     <Stats />
-    <ImageCarousel />
+ 
     <FAQ />
     <Footer />
     <FloatingWhatsApp accountName='Amdor Analytics' phoneNumber='+2348114087403' statusMessage='Typically replies within 1 hour' placeholder='Send us a message..' avatar={avatar}  />
