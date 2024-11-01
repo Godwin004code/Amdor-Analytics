@@ -41,12 +41,12 @@ const Testimonial = () => {
               <div key={idx} className="flex-shrink-0 flex space-x-4 w-[35vw] xl:w-[55vw] lg:w-[50vw] md:w-[70vw] sm:w-[90vw]">
                 {/* Image Card */}
                 <div
-                  className={`carousel-item carousel-item-bg-${(idx % 3) + 1} p-3 h-[200px] bg-cover bg-center text-white rounded-lg`}
+                  className={`carousel-item carousel-item-bg-${(idx % 3) + 1} p-3 h-[200px] bg-cover bg-center text-white rounded-lg w-[50%]`}
                   style={{ backgroundImage: `url(${testimonial.avatar})` }}
                 >
-                  <div className="flex flex-col justify-between h-full bg-black bg-opacity-30 p-3 rounded-md">
-                    <div className="mt-auto">
-                      <div className="text-lg font-semibold">{testimonial.name}</div>
+                  <div className="flex flex-col items-center justify-between h-full bg-black bg-opacity-30 p-3 rounded-md">
+                    <div className="mt-auto ">
+                      <div className="text-lg font-semibold text-center">{testimonial.name}</div>
                       <div className="text-yellow-500 flex items-center">
                         {Array.from({ length: testimonial.rating }, (_, i) => (
                           <MdStarRate key={i} />
@@ -58,17 +58,17 @@ const Testimonial = () => {
 
                 {/* Text Card */}
                 <div
-                  className="carousel-item bg-white rounded-lg shadow-md p-3 flex items-center h-[200px] cursor-pointer overflow-hidden"
+                  className="carousel-item bg-white rounded-lg shadow-md p-3 flex items-center h-[200px] cursor-pointer overflow-hidden w-[50%]"
                   onClick={() => openPopup(testimonial)}
                 >
                   <div className="flex flex-col w-full h-full">
-                    <p className="text-gray-800 mb-2 break-words">{testimonial.shortDescription}</p>
-                    <div className="mt-auto flex items-center justify-between w-full">
+                    <p className="text-gray-800 mb-2 break-words text-sm">{testimonial.shortDescription}</p>
+                    <div className="mt-auto flex items-center gap-5 w-full">
                       <div>
                         <img src={testimonial.avatar} alt={testimonial.name} className="w-10 h-10 rounded-full" />
                       </div>
                       <div className="flex flex-col">
-                        <div className="text-lg font-semibold text-center">{testimonial.name}</div>
+                        <div className="text-lg font-semibold text-center sm:text-sm">{testimonial.name}</div>
                         <button
                           className="text-[#3AA619]"
                           onClick={() => openPopup(testimonial)}

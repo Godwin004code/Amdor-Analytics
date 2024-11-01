@@ -4,6 +4,7 @@ import logo from "../../assets/amdor-new-logo.png";
 import { Link } from "react-router-dom";
 import { HiOutlineX } from "react-icons/hi";
 import { HiBars3BottomRight } from "react-icons/hi2";
+import courses from '../courses/courses';  // Ensure correct path to courses data
 
 const Nav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,7 +18,6 @@ const Nav = () => {
   ];
 
   const learnItems = ["Instruction Led Courses", "Self Paced Courses"];
-  const courseItems = ["Data Analytics", "Business Analysis", "Data Science", "HR Analytics", "Cyber Security", "Data Engineering"];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -62,15 +62,15 @@ const Nav = () => {
 
             {/* Courses Dropdown */}
             <motion.li className="relative group " initial="hidden" animate="visible">
-              <Link className="text-base font-medium text-black  hover:text-[#3AA619]" to="/courses">Courses</Link>
-              <div className="absolute hidden z-20 bg-white group-hover:flex flex-col w-[50vh] p-1 shadow-lg   rounded-lg">
-                {courseItems.map((item, index) => (
+              <Link className="text-base font-medium text-black hover:text-[#3AA619]" to="/courses">Courses</Link>
+              <div className="absolute hidden z-20 bg-white group-hover:flex flex-col w-[50vh] p-1 shadow-lg rounded-lg">
+                {courses.map((course, index) => (
                   <Link
                     key={index}
                     className="block w-[50vh] text-left text-lg py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white"
-                    to={item}
+                    to={`/courses/${course.title}`}
                   >
-                    {item}
+                    {course.title}
                   </Link>
                 ))}
               </div>
@@ -137,9 +137,9 @@ const Nav = () => {
             Courses
             {isCoursesOpen && (
               <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col space-y-2 text-lg">
-                {courseItems.map((item, index) => (
-                  <Link key={index} to="/courses" className="block w-full py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white">
-                    {item}
+                {courses.map((course, index) => (
+                  <Link key={index} to={`/courses/${course.title}`} className="block w-full py-2 px-4 text-black hover:bg-[#3AA619] hover:rounded-lg hover:text-white">
+                    {course.title}
                   </Link>
                 ))}
               </motion.ul>

@@ -13,6 +13,7 @@ import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import avatar from "../../assets/Group 28.png"
 import Popup from '../Global/Popup'
 import { Link } from 'react-router-dom'
+import ImageCarousel from './ImageCarousel';
 
 
 const Home = () => {
@@ -52,6 +53,7 @@ const Home = () => {
     <Testimonial />
     <Pricing />
     <Stats />
+    <ImageCarousel />
     <FAQ />
     <Footer />
     <FloatingWhatsApp accountName='Amdor Analytics' phoneNumber='+2348114087403' statusMessage='Typically replies within 1 hour' placeholder='Send us a message..' avatar={avatar}  />
