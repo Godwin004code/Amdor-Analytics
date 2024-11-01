@@ -41,12 +41,13 @@ const Testimonial = () => {
               <div key={idx} className="flex-shrink-0 flex space-x-4 w-[35vw] xl:w-[55vw] lg:w-[50vw] md:w-[70vw] sm:w-[90vw]">
                 {/* Image Card */}
                 <div
-                  className={`carousel-item carousel-item-bg-${(idx % 3) + 1} p-3 h-[200px] bg-cover bg-center text-white rounded-lg w-[50%]`}
-                  style={{ backgroundImage: `url(${testimonial.avatar})` }}
+                  className={`carousel-item relative p-3 h-[200px] bg-cover bg-center text-white rounded-lg w-[50%]`}
+                  
                 >
-                  <div className="flex flex-col items-center justify-between h-full bg-black bg-opacity-30 p-3 rounded-md">
+                  <img  className='h-full w-full object-cover' src={testimonial.avatar} alt="" />
+                  <div className="flex flex-col absolute top-0 left-0 right-0 items-center justify-between h-full bg-black bg-opacity-30 p-3 rounded-md">
                     <div className="mt-auto ">
-                      <div className="text-lg font-semibold text-center">{testimonial.name}</div>
+                      <div className="text-lg font-semibold text-center">{testimonial.name} {(idx % 3) + 1}</div>
                       <div className="text-yellow-500 flex items-center">
                         {Array.from({ length: testimonial.rating }, (_, i) => (
                           <MdStarRate key={i} />
@@ -104,7 +105,7 @@ const Testimonial = () => {
                 ))}
               </div>
             </div>
-            <YTComponent videoId={selectedTestimonial.videoId} />
+           
           </div>
         </div>
       )}
