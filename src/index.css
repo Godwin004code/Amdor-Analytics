@@ -68,3 +68,20 @@ html,
 .carousel-item-bg-4 {
   background-image: url("./assets/WhatsApp Image 2024-10-13 at 00.42.49.jpeg");
 }
+
+/* CarouselStyles */
+.carousel-item-1 {
+  background-image: url("./assets/WhatsApp Image 2024-10-29 at 12.49.03.jpeg");
+}
+
+.carousel-item-2 {
+  background-image: url("./assets/WhatsApp Image 2024-10-29 at 12.49.02.jpeg");
+}
+
+.carousel-item-3 {
+  background-image: url("./assets/WhatsApp Image 2024-10-29 at 12.49.01.jpeg");
+}
+
+.carousel-item-4 {
+  background-image: url("./assets/xc.jpeg");
+}

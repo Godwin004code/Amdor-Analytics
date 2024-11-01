@@ -49,9 +49,11 @@ const ExploreCourses = () => {
                     style={{ maxHeight: '100%', scrollbarWidth: 'thin' }}
                   >
                     <h2 className="text-sm">{description}</h2>
+                    <Link to={`/courses/${title}`}>
                     <div className="w-full mt-5 h-[50px] rounded-lg bg-[#3AA619] flex justify-center items-center text-[#fff] font-medium">
                       Get it Now
                     </div>
+                    </Link>
                   </div>
                 )}
                 <img

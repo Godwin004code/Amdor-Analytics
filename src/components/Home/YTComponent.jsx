@@ -1,17 +1,17 @@
 import React from 'react';
-import YouTube from 'react-youtube';
 
-const YTComponent = ({videoId}) => {
-  const videoOptions = {
-    height: '100%',
-    width: '100%',
-    playerVars: {
-      autoplay: 1,
-      mute:1    },
-  };
-
+const YTComponent = ({ videoId }) => {
   return (
-    <YouTube videoId={videoId} opts={videoOptions} className='border-4'/>
+    <div className="w-full h-full">
+      <iframe
+        width="100%"
+        height="100%"
+        src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&controls=1`}
+        title="YouTube video player"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
   );
 };
 

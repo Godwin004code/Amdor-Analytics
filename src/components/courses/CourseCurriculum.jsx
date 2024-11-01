@@ -6,7 +6,7 @@ const CourseCurriculum = ({course}) => {
     
     
   return (
-    <div className='w-[90%] mx-auto mt-40 sm:mt-20'>
+    <div className='w-[90%] mx-auto mt-52 sm:mt-20'>
         <h2 className='text-[#3AA619] font-bold text-4xl my-10'>Curriculum</h2>
 <section className='flex w-full justify-between flex-wrap gap-10'>
     {outline.map((courses, idx) => {
