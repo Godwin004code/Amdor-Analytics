@@ -18,7 +18,7 @@ const StudentWork = () => {
     <div className='w-full mt-28'>
         <h2 className='font-semibold text-3xl text-center'>Where our students <span className='text-[#01D300]'>work</span></h2>
         <marquee behavior="" direction="">
-        <section className='flex gap-5 sm:flex-wrap sm:gap-10 justify-between w-[90%] mx-auto mt-10'>
+        <section className='flex gap-5 sm:gap-10 justify-between w-[90%] mx-auto mt-10'>
           <img src={Logo1} className='h-[200px] object-cover w-[200px]' alt="company one" />
           <img src={Logo2} className='h-[200px] object-cover w-[200px]' alt="company one" />
           <img src={Logo3} className='h-[200px] object-cover w-[200px]' alt="company one" />
