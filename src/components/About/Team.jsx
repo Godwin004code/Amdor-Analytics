@@ -18,7 +18,7 @@ const Team = () => {
             <div className='bg-white w-[22%] sm:w-full sm:mb-5 box-shadow p-3'>
                 <img className='h-[300px] w-full rounded-md object-cover ' src={img} alt="Godwin Imoleayo" />
                 <h2 className='text-[#3AA619] font-bold mt-3 text-2xl '>Sandra Asagade</h2>
-                <p className='text-[#6B7280] font-normal text-base'>Data Analytics Facilitator 
+                <p className='text-[#6B7280] font-normal text-base'>Senior Data Associate 
                 </p>
                
             </div>
