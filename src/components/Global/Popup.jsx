@@ -1,14 +1,49 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import { HiOutlineXMark } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
+import emailjs from "@emailjs/browser";
+import Swal from 'sweetalert2';
 
 function Popup({ showPopup, setShowPopup }) {
+  const [email, setEmail] = useState("")
+  const [num, setNum] = useState("")
 
+  const form = useRef()
+  
  
     const handleSubmit = (e) => {
-      e.preventDefault(); // Prevents the default form submission behavior
+      if(email === "" || num === "") {
+Swal.fire({
+  title: "Fields must not be empty",
+            icon: "warning",
+})
+      }
+      else {
+        e.preventDefault(); // Prevents the default form submission behavior
+        emailjs
+            .sendForm(
+              "service_e50bxtu",
+              "template_z1ie3pa",
+              form.current,
+              "xPfbN1VYqWgboVs7v"
+            )
+            .then(
+              (result) => {
+                console.log(result.text);
+                // Swal.fire({
+                //   title: "",
+                //   icon: "success",
+                // });
+              },
+              (error) => {
+                console.log(error.text);
+              }
+            );
+          setEmail("");
+          setNum("")
       const url = ""; // The link you want to open
       window.open(url, "_blank"); // Opens in a new tab, use "_self" for the same tab
+      }
     }
   
   return (
@@ -28,7 +63,7 @@ function Popup({ showPopup, setShowPopup }) {
               Start your journey today and see the difference!
             </h2>
             <p className='text-center mt-5 mb-5'>Enter your email address to get access</p>
-            <form onSubmit={handleSubmit}>
+            <form ref={form}>
               <input
                 type="email"
                 className='block w-full pl-3 py-3 rounded-lg border border-[#F1F1F3]'
@@ -36,6 +71,7 @@ function Popup({ showPopup, setShowPopup }) {
                 placeholder='Enter email address'
                 id="email"
                 required
+                value={email} onChange={(e) =>setEmail(e.target.value)}
               />
               <input
                 type="number"
@@ -43,12 +79,13 @@ function Popup({ showPopup, setShowPopup }) {
                 placeholder='Enter Phone Number'
                 name="num"
                 id="num"
+value={num}
 
-                required
+      onChange={(e) => setNum(e.target.value)}          required
               />
             </form>
             
-              <button type='submit' className='h-[55px] mt-10 w-full rounded-lg text-white bg-[#3AA619] hover:bg-[#339f16] transition duration-200'>
+              <button onClick={handleSubmit} type='submit' className='h-[55px] mt-10 w-full rounded-lg text-white bg-[#3AA619] hover:bg-[#339f16] transition duration-200'>
                 Join Community
               </button>
             
