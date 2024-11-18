@@ -47,7 +47,7 @@ const Testimonial = () => {
                   <img  className='h-full w-full object-cover' src={testimonial.avatar} alt="" />
                   <div className="flex flex-col absolute top-0 left-0 right-0 items-center justify-between h-full bg-black bg-opacity-30 p-3 rounded-md">
                     <div className="mt-auto ">
-                      <div className="text-lg font-semibold text-center">{testimonial.name} {(idx % 3) + 1}</div>
+                      <div className="text-lg font-semibold text-center">{testimonial.name}</div>
                       <div className="text-yellow-500 flex items-center">
                         {Array.from({ length: testimonial.rating }, (_, i) => (
                           <MdStarRate key={i} />

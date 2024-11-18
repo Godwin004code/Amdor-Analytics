@@ -398,7 +398,7 @@ const posts = [
   },
   {
     id: 9,
-    title: "5 In-Demand Skills You Need to Land Your Dream Job in 2024!",
+    title: "5 In-Demand Skills You Need to Land Your Dream Job in 2025!",
     introduction:
       "Are you ready to make 2024 the year you finally secure your dream job? The job market is rapidly evolving, and the key to standing out is by acquiring the right skills. Here are the top 5 in-demand skills that can open the doors to a rewarding and high-paying career this year:",
     steps: [

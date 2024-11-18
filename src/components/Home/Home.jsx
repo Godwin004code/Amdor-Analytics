@@ -14,6 +14,7 @@ import avatar from "../../assets/Group 28.png"
 import Popup from '../Global/Popup'
 import { Link } from 'react-router-dom'
 import ImageCarousel from './ImageCarousel';
+import Countr from './Countr'
 
 
 const Home = () => {
@@ -46,8 +47,8 @@ const Home = () => {
     <Hero />
    </section>
     </section>
-    
-    <StudentWork />
+    <Countr />
+  
     <Benefit />
     <ExploreCourses />
     <ImageCarousel />

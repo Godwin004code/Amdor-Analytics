@@ -24,7 +24,7 @@ const Footer = () => {
           <h3 className='text-white font-semibold mb-4'>Quick Links</h3>
           <nav>
             <ul className='flex flex-col gap-2'>
-              <li><Link to="/learn" className='text-white'>About</Link></li>
+              <li><Link to="/about" className='text-white'>About Us</Link></li>
               <li><Link to="/courses" className='text-white'>Our Courses</Link></li>
               <li><Link to="/blog" className='text-white'>Blog</Link></li>
               <li><Link to="/contact" className='text-white'>Contact</Link></li>

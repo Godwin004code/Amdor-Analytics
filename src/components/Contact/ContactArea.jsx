@@ -55,7 +55,7 @@ const ContactArea = () => {
             )
             .then(
               (result) => {
-                console.log(result.text);
+                console.log(result);
                 Swal.fire({
                   title: "We have received your message, Thank You! We will get back to you as soon as possible.",
                   icon: "success",
@@ -105,7 +105,7 @@ const ContactArea = () => {
                     <div className='flex w-full flex-col gap-2'>
                         <label htmlFor="sub" className='text-[#262626] font-medium text-lg'>Subject</label>
                         <input type="text" value={option}
-                onChange={optionHandler} className='block pl-4 bg-[#FCFCFD] h-[50px] focus:outline-none w-full rounded-md' placeholder='Enter your subject' id='sub' name='sub' />
+                onChange={optionHandler} className='block pl-4 bg-[#FCFCFD] h-[50px] focus:outline-none w-full rounded-md' placeholder='Enter your subject' id='option' name='option' />
                     </div>
                     
                 </div>
@@ -114,7 +114,7 @@ const ContactArea = () => {
                         <label htmlFor="mes" className='text-[#262626] font-medium text-lg'>Message</label>
                         
                         <textarea value={mes}
-                onChange={mesHandler} placeholder='Enter your message'  className='block pt-4 pl-4 bg-[#FCFCFD] focus:outline-none w-full rounded-md'  rows={10}></textarea>
+                onChange={mesHandler} name='mes' placeholder='Enter your message'  className='block pt-4 pl-4 bg-[#FCFCFD] focus:outline-none w-full rounded-md'  rows={10}></textarea>
                     </div>
                     
                 </div>

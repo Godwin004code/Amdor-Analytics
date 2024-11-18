@@ -75,6 +75,7 @@ const ImageCarousel = () => {
         ))}
       </div>
 
+
       {showPopup && selectedVideoId && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg max-w-2xl w-full min-h-[40vh] overflow-y-auto relative flex items-center">
