@@ -6,7 +6,7 @@ const CourseCurriculum = ({course}) => {
     
     
   return (
-    <div className='w-[90%] mx-auto mt-36 sm:mt-20'>
+    <div className='w-[90%] mx-auto mt-36 sm:mt-28'>
          <div className="w-full h-full">
      
     </div>

@@ -22,14 +22,14 @@ const CourseDetailsHero = ({ course }) => {
   return (
     <div className=' w-[90%] mx-auto'>
       <div className='flex sm:flex-col justify-between w-full mt-10 sm:mt-0'>
-        <div className='my-auto w-[50%]'>
+        <div className='my-auto w-[50%] sm:w-full'>
           <h2 className='text-[#262626] font-semibold sm:text-3xl text-5xl'>{course.title}</h2>
           <div className='w-[70%] mt-5 sm:w-full'>
             <h2>Course Description</h2>
             <p className='font-light text-[#09090b] text-base sm:text-base sm:mt-3'>{course.description}</p>
           </div>
         </div>
-        <div className='relative sm:mt-10 cursor-pointer w-[45%]' onClick={() => openPopup(course.videoID)}>
+        <div className='relative sm:mt-10 cursor-pointer w-[45%] sm:w-full' onClick={() => openPopup(course.videoID)}>
           <img src={course.banner} alt={course.title} className='w-[100%]' />
           <div className="bg-black bg-opacity-50 px-3 py-1 absolute top-0 bottom-0 left-0 right-0 rounded-b-lg text-center w-full flex items-center justify-center flex-col text-lg font-medium" onClick={() => openPopup(course.videoId)}>
 
