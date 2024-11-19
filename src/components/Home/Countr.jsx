@@ -43,30 +43,41 @@ export default function Countr({
   }, [images])
 
   useEffect(() => {
-    if (width > 0) {
-      const animateSlider = async () => {
-        await controls.start({
-          x: -width,
-          transition: {
-            duration: width / speed,
-            ease: "linear",
-          },
-        })
-        xPos.set(0)
-        animateSlider()
+    // Animation should only run after the component has mounted
+    let isMounted = true;
+
+    const animateSlider = async () => {
+      if (!isMounted) return; // Skip animation if component is unmounted
+
+      await controls.start({
+        x: -width,
+        transition: {
+          duration: width / speed,
+          ease: "linear",
+        },
+      });
+
+      if (isMounted) {
+        xPos.set(0); // Reset position
+        animateSlider(); // Restart animation
       }
+    };
 
-      animateSlider()
+    if (width > 0) {
+      animateSlider();
     }
-  }, [width, controls, speed, xPos])
 
+    return () => {
+      isMounted = false; // Cleanup to prevent memory leaks or async calls
+    };
+  }, [width, speed, controls, xPos]);
   return (
     <div className="overflow-hidden w-full mt-28">
         <h2 className='font-semibold text-3xl mb-5 text-center'>Where our students <span className='text-[#01D300]'>work</span></h2>
       <motion.div
         ref={sliderRef}
         className="flex gap-10"
-        style={{ x: xPos }}
+        style={{ x: xPos, width: 10, background: 'red' }}
         animate={controls}
       >
         {[...images, ...images].map((src, index) => (
