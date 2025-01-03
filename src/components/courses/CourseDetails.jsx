@@ -40,6 +40,20 @@ const CourseDetails = () => {
 <CourseRating />
 <CourseReview course={course} />
 
+{/* Payment Button after Course Review */}
+      {course.paystackLink && (
+        <div className='mt-10 text-center'>
+          <a
+            href={course.paystackLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className='bg-[#3AA619] text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-[#2d8a0e] transition-colors duration-200'
+          >
+            Make Payment
+          </a>
+        </div>
+      )}
+
 <Footer />
     </section>
   )
