@@ -53,6 +53,21 @@ const CourseDetailsHero = ({ course }) => {
           </div>
         </div>
       )}
+
+{/* Payment Button */}
+      {course.paystackLink && (
+        <div className='mt-10 text-center'>
+          <a
+            href={course.paystackLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className='bg-[#008CBA] text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-[#005f7a] transition-colors duration-200'
+          >
+            Make Payment
+          </a>
+        </div>
+      )}
+      
     </div>
   )
 }
