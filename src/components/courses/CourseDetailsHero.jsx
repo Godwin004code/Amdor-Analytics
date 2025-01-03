@@ -1,16 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { FaPlay } from "react-icons/fa";
 import { HiOutlineX } from "react-icons/hi";
 import YTComponent from '../Home/YTComponent';
-
 
 const CourseDetailsHero = ({ course }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedVideoId, setSelectedVideoId] = useState(null);
 
   const openPopup = (videoId) => {
-    console.log(selectedVideoId, showPopup);
-    
     setSelectedVideoId(videoId);
     setShowPopup(true);
   };
@@ -19,8 +16,9 @@ const CourseDetailsHero = ({ course }) => {
     setShowPopup(false);
     setSelectedVideoId(null);
   };
+
   return (
-    <div className=' w-[90%] mx-auto'>
+    <div className='w-[90%] mx-auto'>
       <div className='flex sm:flex-col justify-between w-full mt-10 sm:mt-0'>
         <div className='my-auto w-[50%] sm:w-full'>
           <h2 className='text-[#262626] font-semibold sm:text-3xl text-5xl'>{course.title}</h2>
@@ -31,15 +29,28 @@ const CourseDetailsHero = ({ course }) => {
         </div>
         <div className='relative sm:mt-10 cursor-pointer w-[45%] sm:w-full' onClick={() => openPopup(course.videoID)}>
           <img src={course.banner} alt={course.title} className='w-[100%]' />
-          <div className="bg-black bg-opacity-50 px-3 py-1 absolute top-0 bottom-0 left-0 right-0 rounded-b-lg text-center w-full flex items-center justify-center flex-col text-lg font-medium" onClick={() => openPopup(course.videoId)}>
-
+          <div className="bg-black bg-opacity-50 px-3 py-1 absolute top-0 bottom-0 left-0 right-0 rounded-b-lg text-center w-full flex items-center justify-center flex-col text-lg font-medium">
             <div className="mt-4">
               <FaPlay color="white" />
             </div>
           </div>
         </div>
-
       </div>
+      
+      {/* Payment Button */}
+      {course.paystackLink && (
+        <div className='mt-10 text-center'>
+          <a
+            href={course.paystackLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className='bg-[#008CBA] text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-[#005f7a] transition-colors duration-200'
+          >
+            Make Payment
+          </a>
+        </div>
+      )}
+
       {showPopup && selectedVideoId && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 sm:p-3 rounded-lg max-w-2xl w-full sm:w-[95%] min-h-[40vh] overflow-y-auto relative flex items-center">
@@ -53,23 +64,8 @@ const CourseDetailsHero = ({ course }) => {
           </div>
         </div>
       )}
-
-{/* Payment Button */}
-      {course.paystackLink && (
-        <div className='mt-10 text-center'>
-          <a
-            href={course.paystackLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className='bg-[#008CBA] text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-[#005f7a] transition-colors duration-200'
-          >
-            Make Payment
-          </a>
-        </div>
-      )}
-      
     </div>
-  )
-}
+  );
+};
 
-export default CourseDetailsHero
+export default CourseDetailsHero;
