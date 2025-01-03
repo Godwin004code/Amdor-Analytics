@@ -44,9 +44,9 @@ const CourseDetailsHero = ({ course }) => {
             href={course.paystackLink}
             target="_blank"
             rel="noopener noreferrer"
-            className='bg-[#008CBA] text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-[#005f7a] transition-colors duration-200'
+            className='bg-[#3AA619] text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-[#005f7a] transition-colors duration-200'
           >
-            Make Payment
+            Get Started
           </a>
         </div>
       )}
