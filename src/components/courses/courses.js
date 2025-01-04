@@ -22,7 +22,7 @@ const courses = [
       duration: "5 months",
       banner: courseBanner,
       rating:5,
-      paystackLink: "https://paystack.com/buy/apex-explorer-ctalyp",
+      
       outline: [
         {
             title: "Excel",
