@@ -41,7 +41,7 @@ Swal.fire({
             );
           setEmail("");
           setNum("")
-      const url = "https://chat.whatsapp.com/Glef2h4zDdH89ToZqYOeRZ"; // The link you want to open
+      const url = "https://chat.whatsapp.com/GWUZBhMbBx6441x5gH0tB3"; // The link you want to open
       window.open(url, "_blank"); // Opens in a new tab, use "_self" for the same tab
       }
     }
