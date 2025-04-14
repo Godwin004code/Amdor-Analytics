@@ -147,6 +147,7 @@ const courses = [
       level: "N600,000",
       duration: "5 months",
       banner: courseBanner2,
+      selarLink: "https://selar.com/49412u",
       rating:5,
       outline: [
         {
@@ -255,6 +256,7 @@ const courses = [
       price: "N450,000",
       level: "N600,000",
       duration: "5 months",
+      selarLink: "https://selar.com/4x4e84",
       banner: courseBanner3,
       rating:5,
       outline: [
@@ -430,6 +432,7 @@ const courses = [
       level: "N500,000",
       duration: "5 months",
       banner: courseBanner4,
+      selarLink: "https://selar.com/li754b",
       rating:5,
       outline: [
         {
@@ -540,6 +543,7 @@ const courses = [
       duration: "5 months",
       banner: courseBanner5,
       rating:5,
+      selarLink: "https://selar.com/30u741",
       outline: [
         {
             title: "Cyber Security",
@@ -706,6 +710,7 @@ const courses = [
       price: "N500,000",
       level: "N700,000",
       duration: "5 months",
+      selarLink: "https://selar.com/0i2dlg",
       banner: courseBanner6,
       rating:5,
       outline: [
