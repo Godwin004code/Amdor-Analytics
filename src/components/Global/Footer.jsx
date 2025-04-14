@@ -79,7 +79,7 @@ const Footer = () => {
       {/* Horizontal Line and Copyright */}
       <div className='w-[90%] mx-auto mt-8 border-t border-white pt-4 text-center'>
         <p className='text-white text-sm font-normal'>
-          © 2024 Amdor Analytics. All rights reserved.
+          © 2025 Amdor Analytics. All rights reserved.
         </p>
       </div>
     </footer>
