@@ -30,9 +30,12 @@ const CourseDetails = () => {
           </section>
           <Nav />
           <CourseDetailsHero course={course} />
-          {/* Payment Button after Course Review */}
+
+
+      
+      {/* Payment Button after Course Review */}
       {course.selarLink && (
-        <div className='Mt-10 sm:pt-26 text-center'>
+        <div className='mt-10 text-center'>
           <a
             href={course.selarLink}
             target="_blank"
@@ -42,13 +45,8 @@ const CourseDetails = () => {
             Get Started
           </a>
         </div>
-      )} 
-        </section>
-      </section>
-
-
-      
-      <CourseCurriculum course={course} />
+      )}
+          <CourseCurriculum course={course} />
       <CourseInstructor course={course} />
       <CourseBenefits course={course} />
       <CourseRating />
@@ -67,6 +65,12 @@ const CourseDetails = () => {
           </a>
         </div>
       )}
+        </section>
+      </section>
+
+
+      
+      
 
       <Footer />
     </section>
