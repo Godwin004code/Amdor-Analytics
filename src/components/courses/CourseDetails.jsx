@@ -48,6 +48,7 @@ const CourseDetails = () => {
       )}
           
         </section>
+      </section>
       <CourseCurriculum course={course} />
       <CourseInstructor course={course} />
       <CourseBenefits course={course} />
@@ -67,12 +68,6 @@ const CourseDetails = () => {
           </a>
         </div>
       )}
-      </section>
-
-
-      
-      
-
       <Footer />
     </section>
   );
