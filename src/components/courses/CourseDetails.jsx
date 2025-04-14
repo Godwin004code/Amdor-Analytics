@@ -30,11 +30,7 @@ const CourseDetails = () => {
           </section>
           <Nav />
           <CourseDetailsHero course={course} />
-        </section>
-      </section>
-
-
-      {/* Payment Button after Course Review */}
+          {/* Payment Button after Course Review */}
       {course.selarLink && (
         <div className='Mt-10 sm:pt-26 text-center'>
           <a
@@ -46,7 +42,12 @@ const CourseDetails = () => {
             Get Started
           </a>
         </div>
-      )}
+      )} 
+        </section>
+      </section>
+
+
+      
       <CourseCurriculum course={course} />
       <CourseInstructor course={course} />
       <CourseBenefits course={course} />
