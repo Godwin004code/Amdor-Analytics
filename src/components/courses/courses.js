@@ -22,7 +22,7 @@ const courses = [
       duration: "5 months",
       banner: courseBanner,
       rating:5,
-      
+      selarLink: "https://selar.com/67z5s6", 
       outline: [
         {
             title: "Excel",
