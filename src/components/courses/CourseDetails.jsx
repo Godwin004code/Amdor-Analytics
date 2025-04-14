@@ -46,7 +46,9 @@ const CourseDetails = () => {
           </a>
         </div>
       )}
-          <CourseCurriculum course={course} />
+          
+        </section>
+      <CourseCurriculum course={course} />
       <CourseInstructor course={course} />
       <CourseBenefits course={course} />
       <CourseRating />
@@ -65,7 +67,6 @@ const CourseDetails = () => {
           </a>
         </div>
       )}
-        </section>
       </section>
 
 
