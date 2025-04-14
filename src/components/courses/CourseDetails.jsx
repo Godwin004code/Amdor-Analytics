@@ -36,7 +36,7 @@ const CourseDetails = () => {
 
       {/* Payment Button after Course Review */}
       {course.selarLink && (
-        <div className='mt-10 text-center'>
+        <div className='Mt-10 sm:Mt-60 text-center'>
           <a
             href={course.selarLink}
             target="_blank"
