@@ -1,5 +1,5 @@
 import img from "../../assets/WhatsApp Image 2024-10-29 at 12.49.03.jpeg";
-import img1 from "../../assets/WhatsApp Image 2024-10-29 at 12.49.02.jpeg";
+import img1 from "../../assets/WhatsApp Image 2024-10-29 at 12.49.02.jpeg.jpg";
 import img2 from "../../assets/WhatsApp Image 2024-10-29 at 12.49.01.jpeg";
 import img3 from "../../assets/xc.jpeg";
 
